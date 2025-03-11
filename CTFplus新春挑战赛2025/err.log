@@ -1,0 +1,1817 @@
+2025-01-19T23:57:00.909Z 0 [Note] MySQL Server started
+2025-01-20T00:53:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T00:17:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-20T00:46:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T00:56:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T00:52:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T00:42:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T00:49:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T00:03:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T00:28:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-20T00:52:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T00:04:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-20T00:45:00.909Z 0 [Error] Duplicate entry '9075' for key 'PRIMARY'
+2025-01-20T00:34:00.909Z 0 [Error] Duplicate entry '2057' for key 'PRIMARY'
+2025-01-20T01:29:00.909Z 0 [Error] Duplicate entry '8225' for key 'PRIMARY'
+2025-01-20T01:53:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T01:19:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-20T00:59:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T01:47:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T01:44:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T01:50:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T01:39:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T01:20:00.909Z 0 [Error] Duplicate entry '1524' for key 'PRIMARY'
+2025-01-20T01:22:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T01:27:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T01:16:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-20T01:03:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T01:29:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T00:59:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T01:50:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T01:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T01:40:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-20T01:01:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T02:41:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T02:52:00.909Z 0 [Error] Duplicate entry '9005' for key 'PRIMARY'
+2025-01-20T02:30:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T02:17:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T02:24:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T02:25:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T02:24:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-20T02:39:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T02:14:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T02:31:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T02:36:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T02:56:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T02:24:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T02:57:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T03:52:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T03:04:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T03:51:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T03:54:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T03:52:00.909Z 0 [Error] Duplicate entry '7065' for key 'PRIMARY'
+2025-01-20T03:25:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T03:36:00.909Z 0 [Error] Duplicate entry '3923' for key 'PRIMARY'
+2025-01-20T03:52:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T03:31:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T03:24:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T03:20:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T03:03:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-20T04:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T04:40:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T03:59:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T04:15:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T04:45:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T04:04:00.909Z 0 [Error] Duplicate entry '9894' for key 'PRIMARY'
+2025-01-20T04:07:00.909Z 0 [Error] Duplicate entry '4772' for key 'PRIMARY'
+2025-01-20T04:08:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T04:06:00.909Z 0 [Error] Duplicate entry '8449' for key 'PRIMARY'
+2025-01-20T04:14:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T04:13:00.909Z 0 [Error] Duplicate entry '4160' for key 'PRIMARY'
+2025-01-20T04:41:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T04:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T04:56:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T04:26:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T04:32:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T04:48:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T05:35:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T05:53:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T04:59:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T04:57:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T05:31:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T05:40:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T05:18:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T05:54:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T04:59:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T05:49:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T05:24:00.909Z 0 [Error] Duplicate entry '8406' for key 'PRIMARY'
+2025-01-20T06:20:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T06:07:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T06:22:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T06:34:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-20T06:28:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T06:05:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T05:59:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T06:34:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T06:13:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T06:07:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T05:58:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T06:31:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T07:33:00.909Z 0 [Error] Duplicate entry '2787' for key 'PRIMARY'
+2025-01-20T07:40:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T07:50:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T07:29:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T07:35:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T07:01:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T07:00:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T07:22:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-20T07:11:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T07:26:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T07:28:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T07:17:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T07:06:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T08:35:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T08:48:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T08:13:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T08:50:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T08:02:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T08:43:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T08:37:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T08:18:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T08:45:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T08:45:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T08:06:00.909Z 0 [Error] Duplicate entry '5003' for key 'PRIMARY'
+2025-01-20T09:07:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T09:33:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T09:47:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T09:50:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T09:14:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T09:06:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-20T09:18:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T09:05:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T09:20:00.909Z 0 [Error] Duplicate entry '8102' for key 'PRIMARY'
+2025-01-20T09:21:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T09:14:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T09:53:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T09:26:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T09:26:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-20T09:41:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T09:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T10:08:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T10:00:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T10:23:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-20T10:02:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T10:31:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T10:04:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T10:30:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T10:52:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T10:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T10:19:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T10:10:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T10:52:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T10:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T10:01:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T10:01:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T10:54:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T10:09:00.909Z 0 [Error] Duplicate entry '6666' for key 'PRIMARY'
+2025-01-20T09:58:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T11:39:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T11:36:00.909Z 0 [Error] Duplicate entry '3367' for key 'PRIMARY'
+2025-01-20T11:26:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T11:19:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T11:40:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T11:21:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T11:08:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-20T11:12:00.909Z 0 [Error] Duplicate entry '9448' for key 'PRIMARY'
+2025-01-20T11:48:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T11:09:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T12:21:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T12:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T12:44:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T12:17:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T12:07:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T12:20:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T12:17:00.909Z 0 [Error] Duplicate entry '1068' for key 'PRIMARY'
+2025-01-20T12:18:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T12:39:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T12:06:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T12:56:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T12:14:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T12:11:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T13:47:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T13:55:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T13:45:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T13:49:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T13:48:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T13:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T13:25:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T13:31:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T13:26:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T13:48:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T13:03:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T13:02:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T13:01:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T13:46:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T12:59:00.909Z 0 [Error] Duplicate entry '2699' for key 'PRIMARY'
+2025-01-20T13:44:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T13:37:00.909Z 0 [Error] Duplicate entry '8501' for key 'PRIMARY'
+2025-01-20T13:54:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T13:41:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T13:24:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T14:23:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T14:16:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T14:23:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T14:30:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T14:18:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T14:27:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T14:20:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T14:49:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-20T14:14:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T14:42:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T14:30:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-20T14:36:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T14:05:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T13:58:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T14:54:00.909Z 0 [Error] Duplicate entry '4274' for key 'PRIMARY'
+2025-01-20T14:02:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T15:49:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T15:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T15:53:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T15:28:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T15:13:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T15:05:00.909Z 0 [Error] Duplicate entry '6747' for key 'PRIMARY'
+2025-01-20T15:21:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T15:18:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T15:53:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T15:50:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T15:12:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T15:12:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T15:29:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-20T15:26:00.909Z 0 [Error] Duplicate entry '7976' for key 'PRIMARY'
+2025-01-20T15:02:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T16:41:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T16:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T15:59:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T16:45:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-20T16:12:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T16:54:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-20T16:15:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T16:05:00.909Z 0 [Error] Duplicate entry '3548' for key 'PRIMARY'
+2025-01-20T16:46:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T16:28:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T16:12:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T16:06:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T16:38:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T16:28:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T16:40:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T16:08:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T16:20:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T16:06:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T16:55:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T16:04:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T17:46:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T17:22:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T17:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T17:34:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T17:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T17:18:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T17:43:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T17:03:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T17:21:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-20T17:46:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T17:00:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T17:49:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T17:53:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T18:10:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T18:34:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-20T18:14:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T18:12:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T18:36:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T18:01:00.909Z 0 [Error] Duplicate entry '8843' for key 'PRIMARY'
+2025-01-20T18:09:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T18:35:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T18:32:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T18:29:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T18:12:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T18:07:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T18:01:00.909Z 0 [Error] Duplicate entry '1599' for key 'PRIMARY'
+2025-01-20T18:21:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T18:18:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T19:15:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T19:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T19:00:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T19:39:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T19:55:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T19:20:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T19:20:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-20T19:28:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-20T19:56:00.909Z 0 [Error] Duplicate entry '7182' for key 'PRIMARY'
+2025-01-20T19:42:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T19:30:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T19:19:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T19:42:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T19:03:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T20:07:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T20:22:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T20:08:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T20:47:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T20:41:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T20:47:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T20:13:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T20:36:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T20:54:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-20T20:38:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T20:37:00.909Z 0 [Error] Duplicate entry '8706' for key 'PRIMARY'
+2025-01-20T20:13:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T19:58:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T20:04:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T20:16:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T20:56:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T20:36:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T20:32:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T21:33:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T21:07:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T21:25:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T21:48:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-20T21:40:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T21:31:00.909Z 0 [Error] Duplicate entry '6578' for key 'PRIMARY'
+2025-01-20T21:19:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-20T21:53:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T21:46:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T21:56:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T21:15:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T21:14:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T21:08:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T21:00:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-20T21:28:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T22:11:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-20T22:08:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-20T22:22:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-20T22:36:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T22:19:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T22:04:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-20T22:54:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T22:14:00.909Z 0 [Error] Duplicate entry '1538' for key 'PRIMARY'
+2025-01-20T22:33:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T22:20:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-20T22:43:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T22:29:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T22:39:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-20T22:05:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T22:49:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T23:13:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-20T23:30:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-20T23:13:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-20T23:50:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T23:45:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-20T23:45:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-20T23:19:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T22:58:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T23:35:00.909Z 0 [Error] Duplicate entry '1263' for key 'PRIMARY'
+2025-01-20T23:38:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-20T23:40:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-20T23:11:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-20T23:51:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-20T23:54:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-20T22:58:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T00:26:00.909Z 0 [Error] Duplicate entry '5991' for key 'PRIMARY'
+2025-01-21T00:46:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T00:35:00.909Z 0 [Error] Duplicate entry '6977' for key 'PRIMARY'
+2025-01-21T00:02:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T00:31:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T00:28:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T00:50:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T00:41:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-20T23:57:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T00:03:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T00:41:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T00:07:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T00:34:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T00:53:00.909Z 0 [Error] Duplicate entry '3569' for key 'PRIMARY'
+2025-01-21T00:53:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T00:41:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T00:41:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T00:15:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T01:26:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T01:23:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T01:18:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T01:03:00.909Z 0 [Error] Duplicate entry '7189' for key 'PRIMARY'
+2025-01-21T01:20:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T01:01:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T01:41:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T01:37:00.909Z 0 [Error] Duplicate entry '8008' for key 'PRIMARY'
+2025-01-21T01:42:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T00:59:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T01:12:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T01:36:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T00:57:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T01:32:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T01:22:00.909Z 0 [Error] Duplicate entry '1922' for key 'PRIMARY'
+2025-01-21T01:02:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T01:16:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T01:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T01:03:00.909Z 0 [Error] Duplicate entry '8364' for key 'PRIMARY'
+2025-01-21T02:25:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T02:28:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T02:03:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T02:02:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T02:21:00.909Z 0 [Error] Duplicate entry '4991' for key 'PRIMARY'
+2025-01-21T02:31:00.909Z 0 [Error] Duplicate entry '6250' for key 'PRIMARY'
+2025-01-21T01:59:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T02:01:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T02:29:00.909Z 0 [Error] Duplicate entry '3272' for key 'PRIMARY'
+2025-01-21T02:10:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T02:35:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T02:23:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T02:21:00.909Z 0 [Error] Duplicate entry '7514' for key 'PRIMARY'
+2025-01-21T02:54:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T02:10:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T02:11:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T02:34:00.909Z 0 [Error] Duplicate entry '6977' for key 'PRIMARY'
+2025-01-21T02:47:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T03:52:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T03:26:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T03:50:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T03:14:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T03:48:00.909Z 0 [Error] Duplicate entry '9234' for key 'PRIMARY'
+2025-01-21T03:36:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T03:55:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T03:46:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T03:04:00.909Z 0 [Error] Duplicate entry '5658' for key 'PRIMARY'
+2025-01-21T03:56:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T03:15:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T03:47:00.909Z 0 [Error] Duplicate entry '8102' for key 'PRIMARY'
+2025-01-21T03:54:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T03:36:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T03:18:00.909Z 0 [Error] Duplicate entry '2341' for key 'PRIMARY'
+2025-01-21T03:37:00.909Z 0 [Error] Duplicate entry '5963' for key 'PRIMARY'
+2025-01-21T03:48:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T03:05:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T03:56:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T04:50:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T04:44:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T04:16:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T04:36:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T04:18:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T04:50:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T03:57:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T03:58:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T04:42:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T03:59:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T04:34:00.909Z 0 [Error] Duplicate entry '2726' for key 'PRIMARY'
+2025-01-21T04:33:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T04:37:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T04:15:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T04:09:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T04:28:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T04:23:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T04:24:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T04:45:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T04:18:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T05:34:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T05:43:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T05:01:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T05:27:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T05:46:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T04:57:00.909Z 0 [Error] Duplicate entry '6018' for key 'PRIMARY'
+2025-01-21T05:08:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T05:23:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T05:45:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T05:37:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T05:46:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T05:45:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T04:57:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T05:46:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T05:18:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T05:03:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T04:57:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T05:05:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T06:29:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T06:17:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T06:42:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T06:49:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T06:56:00.909Z 0 [Error] Duplicate entry '2988' for key 'PRIMARY'
+2025-01-21T06:34:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T06:37:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T06:53:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T06:45:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T06:39:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T06:02:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T06:32:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T06:28:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T07:02:00.909Z 0 [Error] Duplicate entry '2895' for key 'PRIMARY'
+2025-01-21T07:18:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T07:08:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T07:50:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-21T07:40:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T07:41:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T07:16:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T07:56:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T07:54:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T07:35:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T07:42:00.909Z 0 [Error] Duplicate entry '7563' for key 'PRIMARY'
+2025-01-21T07:25:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T07:49:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T07:52:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T07:05:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T06:58:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T07:24:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T07:24:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T07:36:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T07:50:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T08:35:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T08:36:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T08:16:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T08:13:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T08:21:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T08:06:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T08:32:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T08:50:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T08:12:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T08:13:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T08:37:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T08:28:00.909Z 0 [Error] Duplicate entry '5119' for key 'PRIMARY'
+2025-01-21T08:18:00.909Z 0 [Error] Duplicate entry '5112' for key 'PRIMARY'
+2025-01-21T08:52:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T08:22:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T08:04:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T08:32:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T09:50:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T09:09:00.909Z 0 [Error] Duplicate entry '2740' for key 'PRIMARY'
+2025-01-21T09:49:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T09:22:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T09:04:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T09:44:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T09:28:00.909Z 0 [Error] Duplicate entry '8569' for key 'PRIMARY'
+2025-01-21T09:28:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T09:28:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-21T09:19:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T09:47:00.909Z 0 [Error] Duplicate entry '7795' for key 'PRIMARY'
+2025-01-21T09:55:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T09:42:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T09:19:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T09:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T09:01:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T09:13:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T08:59:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T08:58:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T09:47:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T10:52:00.909Z 0 [Error] Duplicate entry '4760' for key 'PRIMARY'
+2025-01-21T10:03:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T10:00:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T10:49:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T10:36:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T10:33:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T10:26:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T10:49:00.909Z 0 [Error] Duplicate entry '3463' for key 'PRIMARY'
+2025-01-21T10:27:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T10:16:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T10:05:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T10:30:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T10:30:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T10:56:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T10:42:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-21T10:41:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T11:20:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T11:07:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T11:50:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T11:05:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T11:33:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T11:13:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T10:58:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T11:40:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T10:59:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T11:55:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T11:37:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T12:06:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T12:36:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T12:04:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T11:59:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T12:55:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T12:45:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T12:41:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T12:27:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T12:45:00.909Z 0 [Error] Duplicate entry '4367' for key 'PRIMARY'
+2025-01-21T12:10:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T12:16:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T11:59:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T12:25:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T12:33:00.909Z 0 [Error] Duplicate entry '7605' for key 'PRIMARY'
+2025-01-21T12:19:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T12:17:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T11:59:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T13:19:00.909Z 0 [Error] Duplicate entry '9758' for key 'PRIMARY'
+2025-01-21T13:05:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T13:36:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-21T13:51:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T13:22:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T13:06:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T13:08:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T13:37:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T13:53:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T13:17:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T13:07:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T13:26:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T13:17:00.909Z 0 [Error] Duplicate entry '9652' for key 'PRIMARY'
+2025-01-21T13:32:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T13:40:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T13:19:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T14:29:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T14:04:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T14:00:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T14:54:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T14:54:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T14:24:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T14:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T14:39:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T14:03:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T14:05:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T14:01:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T14:35:00.909Z 0 [Error] Duplicate entry '8667' for key 'PRIMARY'
+2025-01-21T14:34:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T14:28:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T14:29:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T14:56:00.909Z 0 [Error] Duplicate entry '6351' for key 'PRIMARY'
+2025-01-21T15:44:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T15:50:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T15:32:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T15:09:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T15:26:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-21T15:51:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T15:00:00.909Z 0 [Error] Duplicate entry '4426' for key 'PRIMARY'
+2025-01-21T15:33:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T15:08:00.909Z 0 [Error] Duplicate entry '3775' for key 'PRIMARY'
+2025-01-21T15:06:00.909Z 0 [Error] Duplicate entry '9797' for key 'PRIMARY'
+2025-01-21T15:48:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T15:36:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T15:16:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T15:31:00.909Z 0 [Error] Duplicate entry '6224' for key 'PRIMARY'
+2025-01-21T15:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T15:12:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T15:30:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T15:00:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T15:05:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T15:02:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T16:37:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T16:17:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T16:55:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T16:38:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T16:18:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T16:19:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-21T16:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T16:01:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T16:04:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T16:32:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T16:40:00.909Z 0 [Error] Duplicate entry '4844' for key 'PRIMARY'
+2025-01-21T16:34:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T16:24:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T16:09:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T16:14:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T16:45:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T16:14:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T17:27:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T17:16:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T17:54:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T17:48:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T17:25:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T17:08:00.909Z 0 [Error] Duplicate entry '4077' for key 'PRIMARY'
+2025-01-21T17:21:00.909Z 0 [Error] Duplicate entry '2976' for key 'PRIMARY'
+2025-01-21T17:47:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T17:02:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T17:35:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T17:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T17:14:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T18:44:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T18:34:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T18:27:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T18:43:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T18:00:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-21T18:39:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T17:57:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T18:53:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T18:09:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T18:55:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T18:29:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T17:59:00.909Z 0 [Error] Duplicate entry '1248' for key 'PRIMARY'
+2025-01-21T18:11:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T19:04:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-21T19:07:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T19:21:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T19:09:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T19:06:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T19:25:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T19:15:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T19:01:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T19:55:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T19:13:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-21T19:34:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T19:31:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-21T19:37:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-21T19:09:00.909Z 0 [Error] Duplicate entry '7636' for key 'PRIMARY'
+2025-01-21T19:35:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T19:34:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T19:16:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T20:10:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T20:42:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T20:34:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T20:40:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T20:35:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T20:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T20:50:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T20:46:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T20:30:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T20:45:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-21T20:55:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T20:05:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T21:11:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T21:12:00.909Z 0 [Error] Duplicate entry '4409' for key 'PRIMARY'
+2025-01-21T21:43:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-21T21:04:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T21:14:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T21:41:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T21:11:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T21:05:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T21:03:00.909Z 0 [Error] Duplicate entry '9038' for key 'PRIMARY'
+2025-01-21T21:31:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T21:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T21:47:00.909Z 0 [Error] Duplicate entry '5695' for key 'PRIMARY'
+2025-01-21T21:46:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T21:12:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T21:37:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T21:53:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T21:02:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T22:49:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T22:00:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T22:12:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-21T22:51:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T22:56:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T22:04:00.909Z 0 [Error] Duplicate entry '3182' for key 'PRIMARY'
+2025-01-21T22:30:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T22:17:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T22:05:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-21T22:46:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T22:47:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T22:19:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T21:58:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-21T22:55:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T23:25:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T23:54:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-21T23:00:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T23:49:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T23:24:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-21T23:21:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-21T23:05:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-21T23:29:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-21T23:04:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-21T23:19:00.909Z 0 [Error] Duplicate entry '8201' for key 'PRIMARY'
+2025-01-21T23:39:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-21T23:40:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T23:26:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-21T23:19:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T23:47:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-21T23:34:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T23:07:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-21T23:38:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-21T23:29:00.909Z 0 [Error] Duplicate entry '2314' for key 'PRIMARY'
+2025-01-21T23:06:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T00:12:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-22T00:50:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T00:41:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-22T00:30:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T00:52:00.909Z 0 [Error] Duplicate entry '8970' for key 'PRIMARY'
+2025-01-22T00:17:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T00:34:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T00:09:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T00:43:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T00:39:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T01:08:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T00:58:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T01:32:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T01:37:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T01:12:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-22T01:25:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T01:54:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T01:10:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T01:34:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T01:24:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T01:56:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-22T01:37:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T01:03:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T01:55:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T00:58:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-22T01:09:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T01:56:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T02:23:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-22T02:50:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-22T02:06:00.909Z 0 [Error] Duplicate entry '4010' for key 'PRIMARY'
+2025-01-22T02:54:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T02:35:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T02:16:00.909Z 0 [Error] Duplicate entry '3232' for key 'PRIMARY'
+2025-01-22T02:24:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T02:03:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T02:15:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T02:00:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T02:04:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-22T02:30:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T02:56:00.909Z 0 [Error] Duplicate entry '7892' for key 'PRIMARY'
+2025-01-22T02:51:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T02:33:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T02:03:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T02:43:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T02:06:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T03:31:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T03:27:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T03:27:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T03:17:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T03:55:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T03:43:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T03:41:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T03:50:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T03:31:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T03:45:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T04:06:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T04:41:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-22T04:11:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-22T04:36:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T04:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T04:23:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T04:23:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T04:05:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T04:00:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T04:53:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T04:29:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T04:48:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T04:26:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T04:19:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T05:19:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T05:08:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T05:04:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T05:00:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T05:56:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T05:34:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T05:23:00.909Z 0 [Error] Duplicate entry '8489' for key 'PRIMARY'
+2025-01-22T05:26:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T05:02:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-22T05:22:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T05:00:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T05:03:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T05:44:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T05:39:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T05:46:00.909Z 0 [Error] Duplicate entry '6165' for key 'PRIMARY'
+2025-01-22T05:47:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T06:03:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T05:57:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T06:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T06:04:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T06:31:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T06:26:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T06:46:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-22T06:37:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T06:22:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T06:51:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T07:32:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T07:32:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-22T07:10:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T07:13:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-22T07:27:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T07:51:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T07:09:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T07:08:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T06:57:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-22T07:38:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T07:22:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T07:55:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T07:31:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T07:44:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-22T07:47:00.909Z 0 [Error] Duplicate entry '7511' for key 'PRIMARY'
+2025-01-22T07:29:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T07:37:00.909Z 0 [Error] Duplicate entry '1313' for key 'PRIMARY'
+2025-01-22T07:20:00.909Z 0 [Error] Duplicate entry '5562' for key 'PRIMARY'
+2025-01-22T07:07:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T06:59:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T08:32:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T07:59:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T08:51:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T08:29:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T08:08:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T08:10:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T08:29:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T08:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T08:21:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T08:11:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-22T08:24:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-22T08:47:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T08:52:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T08:32:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T08:19:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T08:41:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T08:00:00.909Z 0 [Error] Duplicate entry '3961' for key 'PRIMARY'
+2025-01-22T09:18:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T09:22:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T09:20:00.909Z 0 [Error] Duplicate entry '8933' for key 'PRIMARY'
+2025-01-22T09:12:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-22T09:46:00.909Z 0 [Error] Duplicate entry '2719' for key 'PRIMARY'
+2025-01-22T09:26:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T09:29:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-22T09:16:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T09:41:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T08:57:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-22T09:43:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T09:27:00.909Z 0 [Error] Duplicate entry '7087' for key 'PRIMARY'
+2025-01-22T10:04:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T10:39:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T10:39:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T10:52:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T10:06:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T10:51:00.909Z 0 [Error] Duplicate entry '3648' for key 'PRIMARY'
+2025-01-22T10:10:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T10:09:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T10:47:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-22T10:35:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T10:46:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T10:18:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T10:02:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T10:34:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-22T10:10:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T10:44:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T10:22:00.909Z 0 [Error] Duplicate entry '3365' for key 'PRIMARY'
+2025-01-22T10:47:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-22T10:27:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T10:23:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T11:20:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T11:38:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T11:12:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T11:03:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T11:26:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-22T11:07:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T11:21:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T11:46:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T11:53:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T11:41:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T10:59:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T11:44:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T12:36:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T12:29:00.909Z 0 [Error] Duplicate entry '1200' for key 'PRIMARY'
+2025-01-22T12:46:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-22T12:49:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T12:00:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T12:18:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-22T12:03:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T12:15:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T12:15:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-22T12:12:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T12:42:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-22T12:00:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T12:50:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-22T13:24:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T13:42:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T13:49:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T13:52:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-22T13:06:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T13:17:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T13:17:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T13:56:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T13:39:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T13:20:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-22T13:41:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T13:33:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T13:50:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T14:18:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T14:17:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T14:37:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T14:17:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T14:25:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T14:30:00.909Z 0 [Error] Duplicate entry '2845' for key 'PRIMARY'
+2025-01-22T14:14:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T14:50:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T14:44:00.909Z 0 [Error] Duplicate entry '6993' for key 'PRIMARY'
+2025-01-22T14:12:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T13:57:00.909Z 0 [Error] Duplicate entry '6824' for key 'PRIMARY'
+2025-01-22T14:39:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T14:24:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T14:12:00.909Z 0 [Error] Duplicate entry '2785' for key 'PRIMARY'
+2025-01-22T14:47:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T14:37:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T14:24:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T14:47:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T15:27:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T15:15:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T14:58:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-22T15:02:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T15:00:00.909Z 0 [Error] Duplicate entry '9024' for key 'PRIMARY'
+2025-01-22T15:46:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T15:28:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-22T15:49:00.909Z 0 [Error] Duplicate entry '8903' for key 'PRIMARY'
+2025-01-22T15:15:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-22T15:20:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T15:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T15:03:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-22T15:25:00.909Z 0 [Error] Duplicate entry '4727' for key 'PRIMARY'
+2025-01-22T15:30:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T15:38:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T15:59:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T16:30:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T16:30:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T16:36:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T16:13:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T16:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T16:05:00.909Z 0 [Error] Duplicate entry '4001' for key 'PRIMARY'
+2025-01-22T16:46:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T16:41:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T16:15:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-22T17:36:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T17:24:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T17:05:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-22T17:30:00.909Z 0 [Error] Duplicate entry '8765' for key 'PRIMARY'
+2025-01-22T17:48:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T17:12:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T17:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T17:50:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T17:14:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T17:40:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-22T18:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T18:19:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T18:31:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T18:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T18:33:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T18:51:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T18:31:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T18:13:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T18:49:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T18:25:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T18:04:00.909Z 0 [Error] Duplicate entry '8286' for key 'PRIMARY'
+2025-01-22T17:58:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T18:37:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T18:51:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-22T18:55:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T18:07:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T18:11:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-22T18:57:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T19:16:00.909Z 0 [Error] Duplicate entry '5355' for key 'PRIMARY'
+2025-01-22T19:13:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T19:45:00.909Z 0 [Error] Duplicate entry '4324' for key 'PRIMARY'
+2025-01-22T19:38:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T19:37:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-22T19:00:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T19:22:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T19:05:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-22T19:01:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T19:16:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-22T19:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T19:53:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T19:54:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T19:37:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-22T19:16:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T20:30:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T20:10:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T20:39:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T20:18:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T20:10:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T20:51:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T20:31:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-22T20:03:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T20:03:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T20:51:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T20:16:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T20:00:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T21:50:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T21:55:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T21:18:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T21:54:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T21:44:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T21:29:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-22T21:17:00.909Z 0 [Error] Duplicate entry '1245' for key 'PRIMARY'
+2025-01-22T21:13:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T21:04:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T21:03:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T21:35:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T22:02:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-22T22:41:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T22:11:00.909Z 0 [Error] Duplicate entry '2374' for key 'PRIMARY'
+2025-01-22T22:00:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-22T22:12:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T22:42:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T22:07:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-22T22:14:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T22:27:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-22T22:29:00.909Z 0 [Error] Duplicate entry '1322' for key 'PRIMARY'
+2025-01-22T22:11:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-22T22:16:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T22:35:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T22:55:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-22T22:48:00.909Z 0 [Error] Duplicate entry '5701' for key 'PRIMARY'
+2025-01-22T22:22:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-22T22:14:00.909Z 0 [Error] Duplicate entry '1935' for key 'PRIMARY'
+2025-01-22T23:27:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T23:20:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T23:08:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T23:49:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-22T23:09:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T23:11:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T23:04:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-22T23:46:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-22T23:24:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-22T23:36:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-22T23:51:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-22T23:56:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T00:28:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T00:23:00.909Z 0 [Error] Duplicate entry '3765' for key 'PRIMARY'
+2025-01-23T00:46:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-23T00:27:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T00:43:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T00:56:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T00:44:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T00:21:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T00:39:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-23T00:16:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T00:37:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T00:17:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-23T00:51:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-23T00:27:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T00:53:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T00:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T00:00:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T01:51:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T00:57:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T01:11:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T00:59:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T01:51:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T01:03:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T01:38:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-23T01:37:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T01:03:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T01:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T01:23:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T01:22:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-23T01:37:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T01:47:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T01:20:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T01:19:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-23T01:18:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T01:53:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T01:38:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T00:57:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T02:28:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T02:12:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T01:57:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T02:17:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T02:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T02:31:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T02:54:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T02:54:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T02:18:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T02:09:00.909Z 0 [Error] Duplicate entry '4738' for key 'PRIMARY'
+2025-01-23T03:05:00.909Z 0 [Error] Duplicate entry '9901' for key 'PRIMARY'
+2025-01-23T03:51:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T03:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T03:18:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T03:19:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T03:45:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T02:57:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T03:50:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T03:44:00.909Z 0 [Error] Duplicate entry '8164' for key 'PRIMARY'
+2025-01-23T03:21:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-23T03:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T04:54:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T04:10:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T04:45:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T04:47:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-23T04:43:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T04:40:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-23T04:19:00.909Z 0 [Error] Duplicate entry '7329' for key 'PRIMARY'
+2025-01-23T04:02:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T04:33:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T04:49:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T04:25:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T04:33:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-23T04:14:00.909Z 0 [Error] Duplicate entry '6181' for key 'PRIMARY'
+2025-01-23T05:29:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T05:20:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T04:59:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T05:40:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T05:13:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-23T05:38:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T05:13:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T05:21:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T05:06:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T05:03:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T05:24:00.909Z 0 [Error] Duplicate entry '1373' for key 'PRIMARY'
+2025-01-23T05:03:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T05:54:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-23T06:40:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T06:46:00.909Z 0 [Error] Duplicate entry '6589' for key 'PRIMARY'
+2025-01-23T06:32:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T06:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T06:03:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T06:39:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T06:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T06:25:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T06:48:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T06:00:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-23T06:10:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T07:44:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T07:10:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-23T07:21:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T07:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T07:34:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T07:17:00.909Z 0 [Error] Duplicate entry '9756' for key 'PRIMARY'
+2025-01-23T07:26:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T07:44:00.909Z 0 [Error] Duplicate entry '7063' for key 'PRIMARY'
+2025-01-23T07:46:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T07:19:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-23T08:03:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T08:09:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T08:53:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T08:27:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T07:59:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T08:34:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T08:33:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T08:41:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T08:40:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T08:17:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-23T08:33:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T08:02:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-23T08:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T09:03:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T09:31:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T09:05:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T09:27:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T08:59:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T09:51:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T08:58:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T09:32:00.909Z 0 [Error] Duplicate entry '4795' for key 'PRIMARY'
+2025-01-23T09:53:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T09:34:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T09:16:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T09:33:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T09:32:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T09:55:00.909Z 0 [Error] Duplicate entry '8842' for key 'PRIMARY'
+2025-01-23T09:11:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T09:28:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T09:08:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T09:39:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T09:40:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T09:37:00.909Z 0 [Error] Duplicate entry '4802' for key 'PRIMARY'
+2025-01-23T10:34:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T10:41:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T10:33:00.909Z 0 [Error] Duplicate entry '7841' for key 'PRIMARY'
+2025-01-23T10:54:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T10:37:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T10:45:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T10:05:00.909Z 0 [Error] Duplicate entry '8451' for key 'PRIMARY'
+2025-01-23T10:30:00.909Z 0 [Error] Duplicate entry '5326' for key 'PRIMARY'
+2025-01-23T10:05:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-23T10:28:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T10:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T10:09:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-23T10:14:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T10:04:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T10:02:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T10:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T10:08:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T11:16:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T11:38:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T11:37:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T10:58:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T11:03:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T11:01:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T11:33:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T11:07:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T11:51:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T11:24:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T10:58:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T11:28:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T11:28:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T11:08:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T11:56:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T11:48:00.909Z 0 [Error] Duplicate entry '6518' for key 'PRIMARY'
+2025-01-23T11:02:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T10:58:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T11:22:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T11:33:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T12:13:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T12:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T12:09:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T12:33:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T12:08:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T12:06:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T12:21:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T12:09:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T12:52:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T12:16:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T12:34:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T12:03:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T12:54:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T12:21:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T12:21:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T12:24:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T12:33:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-23T12:38:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T12:08:00.909Z 0 [Error] Duplicate entry '9476' for key 'PRIMARY'
+2025-01-23T13:10:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T13:40:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T13:55:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T13:49:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T13:49:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T13:15:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-23T13:42:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T13:15:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T13:53:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T13:00:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-23T13:36:00.909Z 0 [Error] Duplicate entry '6404' for key 'PRIMARY'
+2025-01-23T13:53:00.909Z 0 [Error] Duplicate entry '6498' for key 'PRIMARY'
+2025-01-23T13:33:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T13:41:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T13:47:00.909Z 0 [Error] Duplicate entry '9520' for key 'PRIMARY'
+2025-01-23T13:47:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T13:21:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T13:45:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T13:55:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T13:24:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T14:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T14:40:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T14:10:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T14:23:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-23T14:43:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T14:48:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T14:02:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T13:57:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T14:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T14:51:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T14:33:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-23T14:52:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T14:45:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-23T14:32:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T14:01:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T14:53:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T15:23:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T15:12:00.909Z 0 [Error] Duplicate entry '9957' for key 'PRIMARY'
+2025-01-23T15:53:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T15:48:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T15:21:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T15:34:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T15:19:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T15:04:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T15:10:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T15:39:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T15:05:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T15:46:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T15:27:00.909Z 0 [Error] Duplicate entry '3865' for key 'PRIMARY'
+2025-01-23T15:56:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T15:02:00.909Z 0 [Error] Duplicate entry '9414' for key 'PRIMARY'
+2025-01-23T15:42:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T15:52:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-23T15:49:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T15:37:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T15:49:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T16:46:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T16:05:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T16:39:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T16:00:00.909Z 0 [Error] Duplicate entry '6674' for key 'PRIMARY'
+2025-01-23T16:17:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T16:44:00.909Z 0 [Error] Duplicate entry '1174' for key 'PRIMARY'
+2025-01-23T16:44:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T16:56:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T16:45:00.909Z 0 [Error] Duplicate entry '4876' for key 'PRIMARY'
+2025-01-23T16:18:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T16:32:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T17:19:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T17:14:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T16:57:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T17:54:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T17:08:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T17:45:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T17:19:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-23T17:44:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T17:22:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T17:44:00.909Z 0 [Error] Duplicate entry '3428' for key 'PRIMARY'
+2025-01-23T17:49:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-23T17:30:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T17:39:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T18:22:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T18:25:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T17:58:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T18:28:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T18:27:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T18:16:00.909Z 0 [Error] Duplicate entry '6055' for key 'PRIMARY'
+2025-01-23T18:24:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T18:51:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T18:04:00.909Z 0 [Error] Duplicate entry '1696' for key 'PRIMARY'
+2025-01-23T18:52:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T18:54:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T18:54:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T18:16:00.909Z 0 [Error] Duplicate entry '5635' for key 'PRIMARY'
+2025-01-23T19:07:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T19:26:00.909Z 0 [Error] Duplicate entry '2642' for key 'PRIMARY'
+2025-01-23T19:11:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T18:58:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T19:06:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T19:38:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T19:47:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T19:56:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-23T19:25:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T19:49:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T19:03:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T20:36:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T20:09:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-23T20:17:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T20:33:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T20:25:00.909Z 0 [Error] Duplicate entry '1211' for key 'PRIMARY'
+2025-01-23T20:55:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T20:38:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T20:44:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T20:18:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T20:13:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T20:50:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-23T19:59:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T20:11:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T20:41:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-23T20:00:00.909Z 0 [Error] Duplicate entry '6872' for key 'PRIMARY'
+2025-01-23T20:56:00.909Z 0 [Error] Duplicate entry '4294' for key 'PRIMARY'
+2025-01-23T20:03:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T19:57:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T20:19:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T21:29:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T20:57:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T21:33:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T21:39:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T20:57:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T21:47:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T20:57:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-23T21:52:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T21:42:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T21:15:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T21:38:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-23T21:52:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-23T21:56:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T21:13:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-23T22:05:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T22:09:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-23T22:48:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-23T22:25:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-23T22:44:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T22:45:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T22:28:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T22:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T22:09:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T21:57:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T22:45:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T22:44:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T22:46:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T23:03:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T23:37:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-23T23:09:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-23T23:25:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-23T23:51:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T23:20:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T23:47:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-23T23:44:00.909Z 0 [Error] Duplicate entry '2534' for key 'PRIMARY'
+2025-01-23T23:20:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T23:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T00:26:00.909Z 0 [Error] Duplicate entry '5721' for key 'PRIMARY'
+2025-01-24T00:02:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-24T00:42:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T00:56:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T00:13:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-23T23:57:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T00:11:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T00:21:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T00:54:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T00:19:00.909Z 0 [Error] Duplicate entry '2446' for key 'PRIMARY'
+2025-01-24T00:36:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-23T23:58:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-24T00:18:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T00:50:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-23T23:57:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-23T23:58:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T01:45:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T01:56:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T01:11:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T01:47:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T01:12:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T01:22:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T01:53:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T01:22:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T01:18:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T01:45:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T01:44:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T01:07:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T01:38:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T02:56:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T02:24:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T02:09:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T02:09:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T02:02:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T02:29:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T02:38:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T02:42:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T02:49:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T02:33:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T02:33:00.909Z 0 [Error] Duplicate entry '8899' for key 'PRIMARY'
+2025-01-24T02:21:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T02:43:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T02:36:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T02:01:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T02:08:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-24T02:09:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-24T02:25:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T03:30:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T03:26:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T03:26:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T03:51:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T03:56:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T03:45:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T03:51:00.909Z 0 [Error] Duplicate entry '2815' for key 'PRIMARY'
+2025-01-24T03:45:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T03:55:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T03:04:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T03:17:00.909Z 0 [Error] Duplicate entry '4395' for key 'PRIMARY'
+2025-01-24T03:00:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T04:00:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T04:49:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T04:04:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T04:10:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T04:09:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T04:18:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T04:54:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T03:59:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T04:40:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T04:34:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T04:29:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T04:18:00.909Z 0 [Error] Duplicate entry '7964' for key 'PRIMARY'
+2025-01-24T05:08:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T05:49:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T05:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T05:54:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-24T05:19:00.909Z 0 [Error] Duplicate entry '3424' for key 'PRIMARY'
+2025-01-24T05:06:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T05:08:00.909Z 0 [Error] Duplicate entry '8823' for key 'PRIMARY'
+2025-01-24T05:07:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T05:47:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T05:54:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T05:37:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T05:41:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-24T05:42:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T05:28:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T05:31:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T05:02:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T05:46:00.909Z 0 [Error] Duplicate entry '1704' for key 'PRIMARY'
+2025-01-24T05:32:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T05:42:00.909Z 0 [Error] Duplicate entry '4635' for key 'PRIMARY'
+2025-01-24T06:39:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T06:32:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T06:54:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T06:46:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T06:16:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T06:43:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T06:19:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T05:59:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T06:44:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T06:16:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T06:06:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T07:42:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T07:25:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T06:58:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T07:51:00.909Z 0 [Error] Duplicate entry '2715' for key 'PRIMARY'
+2025-01-24T07:00:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T07:10:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T07:53:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-24T07:40:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-24T07:23:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T07:00:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T07:34:00.909Z 0 [Error] Duplicate entry '2734' for key 'PRIMARY'
+2025-01-24T07:01:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-24T08:45:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T07:58:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T08:04:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T08:33:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T08:39:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T08:41:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T08:48:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T08:09:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T08:44:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T08:14:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T08:13:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T08:21:00.909Z 0 [Error] Duplicate entry '4635' for key 'PRIMARY'
+2025-01-24T08:09:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T07:58:00.909Z 0 [Error] Duplicate entry '1068' for key 'PRIMARY'
+2025-01-24T08:01:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T08:24:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T08:50:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T08:47:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T09:40:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T09:27:00.909Z 0 [Error] Duplicate entry '1731' for key 'PRIMARY'
+2025-01-24T09:51:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T09:54:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T09:47:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T09:06:00.909Z 0 [Error] Duplicate entry '5511' for key 'PRIMARY'
+2025-01-24T09:44:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T09:46:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T09:35:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T09:03:00.909Z 0 [Error] Duplicate entry '1820' for key 'PRIMARY'
+2025-01-24T09:21:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T09:33:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T09:06:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T10:29:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T10:10:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T10:20:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T10:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T10:30:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-24T10:21:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-24T10:06:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T10:11:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-24T10:51:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-24T10:35:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T10:05:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T10:32:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T10:42:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T11:07:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T11:31:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T11:34:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T11:47:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T11:46:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T11:20:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T11:51:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T11:18:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T11:41:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T11:31:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T11:14:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T11:31:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T11:17:00.909Z 0 [Error] Data too long for column 'status'
+2025-01-24T12:14:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T12:51:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-24T12:03:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T12:56:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T12:56:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T12:22:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T12:28:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T12:00:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T12:56:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T12:43:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T12:26:00.909Z 0 [Error] Duplicate entry '1952' for key 'PRIMARY'
+2025-01-24T12:32:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T12:08:00.909Z 0 [Error] Duplicate entry '4295' for key 'PRIMARY'
+2025-01-24T12:40:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T12:43:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T12:26:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T13:38:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T13:27:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T13:31:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T13:18:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T13:02:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T13:33:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T13:40:00.909Z 0 [Error] Duplicate entry '2030' for key 'PRIMARY'
+2025-01-24T13:19:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T13:53:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T13:48:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T13:52:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T13:09:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T13:27:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T13:27:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T13:20:00.909Z 0 [Error] Duplicate entry '1187' for key 'PRIMARY'
+2025-01-24T13:42:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-24T13:02:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T13:55:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T14:33:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T14:11:00.909Z 0 [Error] Duplicate entry '9099' for key 'PRIMARY'
+2025-01-24T14:04:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T14:10:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T14:20:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T14:54:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T14:29:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T14:30:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T14:27:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T14:04:00.909Z 0 [Error] Duplicate entry '3499' for key 'PRIMARY'
+2025-01-24T14:15:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T15:41:00.909Z 0 [Error] Duplicate entry '9050' for key 'PRIMARY'
+2025-01-24T15:50:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T15:23:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T15:46:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T15:28:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T15:27:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T15:34:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T15:48:00.909Z 0 [Error] Duplicate entry '5230' for key 'PRIMARY'
+2025-01-24T15:52:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T15:50:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T15:15:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-24T15:16:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T15:44:00.909Z 0 [Error] Duplicate entry '4274' for key 'PRIMARY'
+2025-01-24T15:28:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T15:45:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T15:10:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T15:47:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-24T15:40:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T15:26:00.909Z 0 [Error] Duplicate entry '7456' for key 'PRIMARY'
+2025-01-24T16:03:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T16:12:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T16:55:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T16:06:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T16:36:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T15:59:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T16:25:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T16:52:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T16:55:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T16:46:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T15:59:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T16:56:00.909Z 0 [Error] Duplicate entry '3174' for key 'PRIMARY'
+2025-01-24T15:58:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T17:47:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T17:14:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-24T16:57:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T17:01:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T17:48:00.909Z 0 [Error] Duplicate entry '6595' for key 'PRIMARY'
+2025-01-24T17:36:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T17:16:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-24T16:57:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T17:30:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-24T17:28:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T17:46:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T17:16:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T18:21:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T18:45:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T18:47:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T18:37:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T18:56:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T18:06:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T18:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T18:56:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T17:58:00.909Z 0 [Error] Unknown column 'title' in 'where clause'
+2025-01-24T18:13:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T18:21:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T18:55:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T18:08:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T18:17:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T18:42:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T18:50:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T18:18:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T18:04:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T17:59:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T18:24:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T19:43:00.909Z 0 [Error] Duplicate entry '6620' for key 'PRIMARY'
+2025-01-24T19:37:00.909Z 0 [Error] Duplicate entry '5270' for key 'PRIMARY'
+2025-01-24T19:25:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T19:34:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T19:12:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T19:22:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T19:00:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T19:47:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-24T19:01:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-24T19:35:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T20:49:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T20:03:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T20:30:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T20:12:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T20:23:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T20:23:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T20:03:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T20:18:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T20:18:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T20:19:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T20:12:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T20:22:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T20:29:00.909Z 0 [Error] Unknown column 'content' in 'where clause'
+2025-01-24T20:30:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T20:11:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T21:10:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T21:18:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-24T21:24:00.909Z 0 [Error] Data too long for column 'content'
+2025-01-24T21:52:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T21:47:00.909Z 0 [Error] Unknown column 'status' in 'where clause'
+2025-01-24T21:44:00.909Z 0 [Error] Table 'wordpress.wp_test' doesn't exist
+2025-01-24T21:52:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-24T21:45:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T21:11:00.909Z 0 [Error] Duplicate entry '6468' for key 'PRIMARY'
+2025-01-24T21:43:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T21:00:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T21:17:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T21:11:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T21:23:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T21:52:00.909Z 0 [Error] Data too long for column 'title'
+2025-01-24T21:17:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T21:51:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T21:04:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T22:35:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T22:08:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T22:55:00.909Z 0 [Error] Table 'wordpress.wp_backup' doesn't exist
+2025-01-24T22:22:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T22:53:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T22:56:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T22:05:00.909Z 0 [Error] Duplicate entry '1403' for key 'PRIMARY'
+2025-01-24T22:36:00.909Z 0 [Error] Incorrect database name 'staging'
+2025-01-24T22:23:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T22:41:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T22:12:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T22:41:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T22:46:00.909Z 0 [Error] Data too long for column 'name'
+2025-01-24T22:05:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T22:22:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T22:21:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T22:31:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T22:58:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-24T23:32:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-24T23:45:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-24T23:18:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-24T23:45:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-24T22:57:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T23:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-24T23:19:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T23:07:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T23:52:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T23:38:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T23:56:00.909Z 0 [Error] Table 'wordpress.non_existent' doesn't exist
+2025-01-24T23:50:00.909Z 0 [Error] Column count doesn't match value count
+2025-01-24T23:14:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-24T23:47:00.909Z 0 [Error] Incorrect database name 'test'
+2025-01-25T00:53:00.909Z 0 [Error] Cannot delete or update a parent row
+2025-01-25T00:21:00.909Z 0 [Error] Table 'wordpress.wp_temp' doesn't exist
+2025-01-25T00:06:00.909Z 0 [Error] Duplicate entry '6046' for key 'PRIMARY'
+2025-01-25T00:49:00.909Z 0 [Error] Data too long for column 'id'
+2025-01-25T00:08:00.909Z 0 [Error] Unknown column 'id' in 'where clause'
+2025-01-25T00:52:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-25T00:03:00.909Z 0 [Error] Incorrect database name 'backup'
+2025-01-24T23:59:00.909Z 0 [Error] Lock wait timeout exceeded
+2025-01-25T00:46:00.909Z 0 [Error] Access denied for user 'wordpress'@'localhost'
+2025-01-25T00:51:00.909Z 0 [Error] The MySQL server is running with the --secure-file-priv option
+2025-01-25T00:02:00.909Z 0 [Error] Incorrect database name 'wordpress_dev'
+2025-01-25T00:26:00.909Z 0 [Error] Unknown column 'name' in 'where clause'
+2025-01-25T00:23:00.909Z 0 [Error] Unknown column 'content' in 'where clause'

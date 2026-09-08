@@ -1,0 +1,990 @@
+设备品牌,设备类型,产品型号,CVE编号,漏洞描述,攻击向量,厂商补丁链接,受影响版本,公开日期
+ASUS,Unknown,android,CVE-2024-0046,"In installExistingPackageAsUser of InstallPackageHelper.java, there is a possible carrier restriction bypass due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",Local,https://source.android.com/security/bulletin/2024-03-01,2.3,2024-03-11
+ASUS,Router,"RT-AX86, RT-AX55, RT-AC86U, RT-AX3000, RT-AC68R, RT-AX58U, RT-AC68U, RT-AC67U, RT-AX88U",CVE-2024-0401,"ASUS routers supporting custom OpenVPN profiles are vulnerable to a code execution vulnerability. An authenticated and remote attacker can execute arbitrary operating system commands by uploading a crafted OVPN profile. Known affected routers include ASUS ExpertWiFi, ASUS RT-AX55, ASUS RT-AX58U, ASUS RT-AC67U, ASUS RT-AC68R, ASUS RT-AC68U, ASUS RT-AX86, ASUS RT-AC86U, ASUS RT-AX88U, and ASUS RT-AX3000.",,Not provided,unknown versions,2024-05-20
+ASUS,Router,Router,CVE-2024-11985,"An improper input validation vulnerability leads to device crashes in certain ASUS router models. 
+Refer to the '12/03/2024 ASUS Router Improper Input Validation' section on the ASUS Security Advisory for more information.",,https://www.asus.com/content/asus-product-security-advisory/,unknown versions,2024-12-04
+ASUS,Router,Router,CVE-2024-12912,"An improper input insertion vulnerability in AiCloud on certain router models may lead to arbitrary command execution.
+Refer to the '01/02/2025 ASUS Router AiCloud vulnerability' section on the ASUS Security Advisory for more information.",,https://www.asus.com/content/asus-product-security-advisory/,unknown versions,2025-01-02
+ASUS,Unknown,Unknown,CVE-2024-12957,"A file handling command vulnerability in certain versions of Armoury Crate may result in arbitrary file deletion.
+Refer to the '01/23/2025 Security Update for Armoury Crate App' section on the ASUS Security Advisory for more information.",,https://www.asus.com/content/asus-product-security-advisory/,unknown versions,2025-01-23
+ASUS,Router,Router,CVE-2024-13062,"An unintended entry point vulnerability has been identified in certain router models, which may allow for arbitrary command execution.
+Refer to the ' 01/02/2025 ASUS Router AiCloud vulnerability' section on the ASUS Security Advisory for more information.",,https://www.asus.com/content/asus-product-security-advisory/,unknown versions,2025-01-02
+ASUS,Router,Router,CVE-2024-1655,"Certain ASUS WiFi routers models has an OS Command Injection vulnerability, allowing an authenticated remote attacker to execute arbitrary system commands by sending a specially crafted request.",,Not provided,unknown versions,2024-04-15
+ASUS,Unknown,"dxp,liferay_portal",CVE-2024-25148,"In Liferay Portal 7.2.0 through 7.4.1, and older unsupported versions, and Liferay DXP 7.3 before service pack 3, 7.2 before fix pack 15, and older unsupported versions the `doAsUserId` URL parameter may get leaked when creating linked content using the WYSIWYG editor and while impersonating a user. This may allow remote authenticated users to impersonate a user after accessing the linked content.",Network,https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2024-25148,"2.3, 2.3 (up to 7.4.1)",2024-02-08
+ASUS,Unknown,Unknown,CVE-2024-26342,A Null pointer dereference in usr/sbin/httpd in ASUS AC68U 3.0.0.4.384.82230 allows remote attackers to trigger DoS via network packet.,,Not provided,unknown versions,2024-02-28
+ASUS,Graphics Card,Unknown,CVE-2024-26656,"In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amdgpu: fix use-after-free bug
+
+The bug can be triggered by sending a single amdgpu_gem_userptr_ioctl
+to the AMDGPU DRM driver on any ASICs with an invalid address and size.
+The bug was reported by Joonkyo Jung <joonkyoj@yonsei.ac.kr>.
+For example the following code:
+
+static void Syzkaller1(int fd)
+{
+	struct drm_amdgpu_gem_userptr arg;
+	int ret;
+
+	arg.addr = 0xffffffffffff0000;
+	arg.size = 0x80000000; /*2 Gb*/
+	arg.flags = 0x7;
+	ret = drmIoctl(fd, 0xc1186451/*amdgpu_gem_userptr_ioctl*/, &arg);
+}
+
+Due to the address and size are not valid there is a failure in
+amdgpu_hmm_register->mmu_interval_notifier_insert->__mmu_interval_notifier_insert->
+check_shl_overflow, but we even the amdgpu_hmm_register failure we still call
+amdgpu_hmm_unregister into  amdgpu_gem_object_free which causes access to a bad address.
+The following stack is below when the issue is reproduced when Kazan is enabled:
+
+[  +0.000014] Hardware name: ASUS System Product Name/ROG STRIX B550-F GAMING (WI-FI), BIOS 1401 12/03/2020
+[  +0.000009] RIP: 0010:mmu_interval_notifier_remove+0x327/0x340
+[  +0.000017] Code: ff ff 49 89 44 24 08 48 b8 00 01 00 00 00 00 ad de 4c 89 f7 49 89 47 40 48 83 c0 22 49 89 47 48 e8 ce d1 2d 01 e9 32 ff ff ff <0f> 0b e9 16 ff ff ff 4c 89 ef e8 fa 14 b3 ff e9 36 ff ff ff e8 80
+[  +0.000014] RSP: 0018:ffffc90002657988 EFLAGS: 00010246
+[  +0.000013] RAX: 0000000000000000 RBX: 1ffff920004caf35 RCX: ffffffff8160565b
+[  +0.000011] RDX: dffffc0000000000 RSI: 0000000000000004 RDI: ffff8881a9f78260
+[  +0.000010] RBP: ffffc90002657a70 R08: 0000000000000001 R09: fffff520004caf25
+[  +0.000010] R10: 0000000000000003 R11: ffffffff8161d1d6 R12: ffff88810e988c00
+[  +0.000010] R13: ffff888126fb5a00 R14: ffff88810e988c0c R15: ffff8881a9f78260
+[  +0.000011] FS:  00007ff9ec848540(0000) GS:ffff8883cc880000(0000) knlGS:0000000000000000
+[  +0.000012] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000010] CR2: 000055b3f7e14328 CR3: 00000001b5770000 CR4: 0000000000350ef0
+[  +0.000010] Call Trace:
+[  +0.000006]  <TASK>
+[  +0.000007]  ? show_regs+0x6a/0x80
+[  +0.000018]  ? __warn+0xa5/0x1b0
+[  +0.000019]  ? mmu_interval_notifier_remove+0x327/0x340
+[  +0.000018]  ? report_bug+0x24a/0x290
+[  +0.000022]  ? handle_bug+0x46/0x90
+[  +0.000015]  ? exc_invalid_op+0x19/0x50
+[  +0.000016]  ? asm_exc_invalid_op+0x1b/0x20
+[  +0.000017]  ? kasan_save_stack+0x26/0x50
+[  +0.000017]  ? mmu_interval_notifier_remove+0x23b/0x340
+[  +0.000019]  ? mmu_interval_notifier_remove+0x327/0x340
+[  +0.000019]  ? mmu_interval_notifier_remove+0x23b/0x340
+[  +0.000020]  ? __pfx_mmu_interval_notifier_remove+0x10/0x10
+[  +0.000017]  ? kasan_save_alloc_info+0x1e/0x30
+[  +0.000018]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? __kasan_kmalloc+0xb1/0xc0
+[  +0.000018]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? __kasan_check_read+0x11/0x20
+[  +0.000020]  amdgpu_hmm_unregister+0x34/0x50 [amdgpu]
+[  +0.004695]  amdgpu_gem_object_free+0x66/0xa0 [amdgpu]
+[  +0.004534]  ? __pfx_amdgpu_gem_object_free+0x10/0x10 [amdgpu]
+[  +0.004291]  ? do_syscall_64+0x5f/0xe0
+[  +0.000023]  ? srso_return_thunk+0x5/0x5f
+[  +0.000017]  drm_gem_object_free+0x3b/0x50 [drm]
+[  +0.000489]  amdgpu_gem_userptr_ioctl+0x306/0x500 [amdgpu]
+[  +0.004295]  ? __pfx_amdgpu_gem_userptr_ioctl+0x10/0x10 [amdgpu]
+[  +0.004270]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? __this_cpu_preempt_check+0x13/0x20
+[  +0.000015]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? sysvec_apic_timer_interrupt+0x57/0xc0
+[  +0.000020]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? asm_sysvec_apic_timer_interrupt+0x1b/0x20
+[  +0.000022]  ? drm_ioctl_kernel+0x17b/0x1f0 [drm]
+[  +0.000496]  ? __pfx_amdgpu_gem_userptr_ioctl+0x10/0x10 [amdgpu]
+[  +0.004272]  ? drm_ioctl_kernel+0x190/0x1f0 [drm]
+[  +0.000492]  drm_ioctl_kernel+0x140/0x1f0 [drm]
+[  +0.000497]  ? __pfx_amdgpu_gem_userptr_ioctl+0x10/0x10 [amdgpu]
+[  +0.004297]  ? __pfx_drm_ioctl_kernel+0x10/0x10 [d
+---truncated---",,Not provided,unknown versions,2024-04-02
+ASUS,Graphics Card,linux_kernel,CVE-2024-26657,"In the Linux kernel, the following vulnerability has been resolved:
+
+drm/sched: fix null-ptr-deref in init entity
+
+The bug can be triggered by sending an amdgpu_cs_wait_ioctl
+to the AMDGPU DRM driver on any ASICs with valid context.
+The bug was reported by Joonkyo Jung <joonkyoj@yonsei.ac.kr>.
+For example the following code:
+
+    static void Syzkaller2(int fd)
+    {
+	union drm_amdgpu_ctx arg1;
+	union drm_amdgpu_wait_cs arg2;
+
+	arg1.in.op = AMDGPU_CTX_OP_ALLOC_CTX;
+	ret = drmIoctl(fd, 0x140106442 /* amdgpu_ctx_ioctl */, &arg1);
+
+	arg2.in.handle = 0x0;
+	arg2.in.timeout = 0x2000000000000;
+	arg2.in.ip_type = AMD_IP_VPE /* 0x9 */;
+	arg2->in.ip_instance = 0x0;
+	arg2.in.ring = 0x0;
+	arg2.in.ctx_id = arg1.out.alloc.ctx_id;
+
+	drmIoctl(fd, 0xc0206449 /* AMDGPU_WAIT_CS * /, &arg2);
+    }
+
+The ioctl AMDGPU_WAIT_CS without previously submitted job could be assumed that
+the error should be returned, but the following commit 1decbf6bb0b4dc56c9da6c5e57b994ebfc2be3aa
+modified the logic and allowed to have sched_rq equal to NULL.
+
+As a result when there is no job the ioctl AMDGPU_WAIT_CS returns success.
+The change fixes null-ptr-deref in init entity and the stack below demonstrates
+the error condition:
+
+[  +0.000007] BUG: kernel NULL pointer dereference, address: 0000000000000028
+[  +0.007086] #PF: supervisor read access in kernel mode
+[  +0.005234] #PF: error_code(0x0000) - not-present page
+[  +0.005232] PGD 0 P4D 0
+[  +0.002501] Oops: 0000 [#1] PREEMPT SMP KASAN NOPTI
+[  +0.005034] CPU: 10 PID: 9229 Comm: amd_basic Tainted: G    B   W    L     6.7.0+ #4
+[  +0.007797] Hardware name: ASUS System Product Name/ROG STRIX B550-F GAMING (WI-FI), BIOS 1401 12/03/2020
+[  +0.009798] RIP: 0010:drm_sched_entity_init+0x2d3/0x420 [gpu_sched]
+[  +0.006426] Code: 80 00 00 00 00 00 00 00 e8 1a 81 82 e0 49 89 9c 24 c0 00 00 00 4c 89 ef e8 4a 80 82 e0 49 8b 5d 00 48 8d 7b 28 e8 3d 80 82 e0 <48> 83 7b 28 00 0f 84 28 01 00 00 4d 8d ac 24 98 00 00 00 49 8d 5c
+[  +0.019094] RSP: 0018:ffffc90014c1fa40 EFLAGS: 00010282
+[  +0.005237] RAX: 0000000000000001 RBX: 0000000000000000 RCX: ffffffff8113f3fa
+[  +0.007326] RDX: fffffbfff0a7889d RSI: 0000000000000008 RDI: ffffffff853c44e0
+[  +0.007264] RBP: ffffc90014c1fa80 R08: 0000000000000001 R09: fffffbfff0a7889c
+[  +0.007266] R10: ffffffff853c44e7 R11: 0000000000000001 R12: ffff8881a719b010
+[  +0.007263] R13: ffff88810d412748 R14: 0000000000000002 R15: 0000000000000000
+[  +0.007264] FS:  00007ffff7045540(0000) GS:ffff8883cc900000(0000) knlGS:0000000000000000
+[  +0.008236] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.005851] CR2: 0000000000000028 CR3: 000000011912e000 CR4: 0000000000350ef0
+[  +0.007175] Call Trace:
+[  +0.002561]  <TASK>
+[  +0.002141]  ? show_regs+0x6a/0x80
+[  +0.003473]  ? __die+0x25/0x70
+[  +0.003124]  ? page_fault_oops+0x214/0x720
+[  +0.004179]  ? preempt_count_sub+0x18/0xc0
+[  +0.004093]  ? __pfx_page_fault_oops+0x10/0x10
+[  +0.004590]  ? srso_return_thunk+0x5/0x5f
+[  +0.004000]  ? vprintk_default+0x1d/0x30
+[  +0.004063]  ? srso_return_thunk+0x5/0x5f
+[  +0.004087]  ? vprintk+0x5c/0x90
+[  +0.003296]  ? drm_sched_entity_init+0x2d3/0x420 [gpu_sched]
+[  +0.005807]  ? srso_return_thunk+0x5/0x5f
+[  +0.004090]  ? _printk+0xb3/0xe0
+[  +0.003293]  ? __pfx__printk+0x10/0x10
+[  +0.003735]  ? asm_sysvec_apic_timer_interrupt+0x1b/0x20
+[  +0.005482]  ? do_user_addr_fault+0x345/0x770
+[  +0.004361]  ? exc_page_fault+0x64/0xf0
+[  +0.003972]  ? asm_exc_page_fault+0x27/0x30
+[  +0.004271]  ? add_taint+0x2a/0xa0
+[  +0.003476]  ? drm_sched_entity_init+0x2d3/0x420 [gpu_sched]
+[  +0.005812]  amdgpu_ctx_get_entity+0x3f9/0x770 [amdgpu]
+[  +0.009530]  ? finish_task_switch.isra.0+0x129/0x470
+[  +0.005068]  ? __pfx_amdgpu_ctx_get_entity+0x10/0x10 [amdgpu]
+[  +0.010063]  ? __kasan_check_write+0x14/0x20
+[  +0.004356]  ? srso_return_thunk+0x5/0x5f
+[  +0.004001]  ? mutex_unlock+0x81/0xd0
+[  +0.003802]  ? srso_return_thunk+0x5/0x5f
+[  +0.004096]  amdgpu_cs_wait_ioctl+0xf6/0x270 [amdgpu]
+[  +0.009355]  ? __pfx_
+---truncated---",Local,Not provided,"2.3 (before 6.7.12), 2.3, 2.3 (before 6.8.3)",2024-04-02
+ASUS,Router,RT-AC53,CVE-2024-26683,"In the Linux kernel, the following vulnerability has been resolved:
+
+wifi: cfg80211: detect stuck ECSA element in probe resp
+
+We recently added some validation that we don't try to
+connect to an AP that is currently in a channel switch
+process, since that might want the channel to be quiet
+or we might not be able to connect in time to hear the
+switching in a beacon. This was in commit c09c4f31998b
+(""wifi: mac80211: don't connect to an AP while it's in
+a CSA process"").
+
+However, we promptly got a report that this caused new
+connection failures, and it turns out that the AP that
+we now cannot connect to is permanently advertising an
+extended channel switch announcement, even with quiet.
+The AP in question was an Asus RT-AC53, with firmware
+3.0.0.4.380_10760-g21a5898.
+
+As a first step, attempt to detect that we're dealing
+with such a situation, so mac80211 can use this later.",,Not provided,unknown versions,2024-04-02
+ASUS,Router,RT-N12,CVE-2024-28325,"Asus RT-N12+ B1 router stores credentials in cleartext, which could allow local attackers to obtain unauthorized access and modify router settings.",,http://asus.com,unknown versions,2024-04-26
+ASUS,Router,RT-N12,CVE-2024-28326,Incorrect Access Control in ASUS RT-N12+ B1 and RT-N12 D1 routers allows local attackers to obtain root terminal access via the the UART interface.,,http://asus.com,unknown versions,2024-04-26
+ASUS,Router,RT-N12,CVE-2024-28327,"Asus RT-N12+ B1 router stores user passwords in plaintext, which could allow local attackers to obtain unauthorized access and modify router settings.",,http://asus.com,unknown versions,2024-04-26
+ASUS,Router,RT-N12,CVE-2024-28328,CSV Injection vulnerability in the Asus RT-N12+ router allows administrator users to inject arbitrary commands or formulas in the client name parameter which can be triggered and executed in a different user session upon exporting to CSV format.,,http://asus.com,unknown versions,2024-04-26
+ASUS,Router,Router,CVE-2024-3079,"Certain models of ASUS routers have buffer overflow vulnerabilities, allowing remote attackers with administrative privileges to execute arbitrary commands on the device.",,Not provided,unknown versions,2024-06-14
+ASUS,Router,Router,CVE-2024-3080,"Certain ASUS router models have authentication bypass vulnerability, allowing unauthenticated remote attackers to log in the device.",,Not provided,unknown versions,2024-06-14
+ASUS,Unknown,Unknown,CVE-2024-30804,An issue discovered in the DeviceIoControl component in ASUS Fan_Xpert before v.10013 allows an attacker to execute arbitrary code via crafted IOCTL requests.,,Not provided,unknown versions,2024-04-26
+ASUS,Unknown,download_master,CVE-2024-31159,The parameter used in the certain page of ASUS Download Master is not properly filtered for user input. A remote attacker with administrative privilege can insert JavaScript code to the parameter for Reflected Cross-site scripting attacks.,Network,Not provided,2.3 (before 3.1.0.114),2024-06-14
+ASUS,Unknown,download_master,CVE-2024-31160,The parameter used in the certain page of ASUS Download Master is not properly filtered for user input. A remote attacker with administrative privilege can insert JavaScript code to the parameter for Stored Cross-site scripting attacks.,Network,Not provided,2.3 (before 3.1.0.114),2024-06-14
+ASUS,Unknown,download_master,CVE-2024-31161,"The upload functionality of ASUS Download Master does not properly filter user input. Remote attackers with administrative privilege can exploit this vulnerability to upload any file to any location. They may even upload malicious web page files to the website directory, allowing arbitrary system commands to be executed upon browsing the webpage.",Network,Not provided,2.3 (before 3.1.0.114),2024-06-14
+ASUS,Unknown,Unknown,CVE-2024-31162,The specific function parameter of ASUS Download Master does not properly filter user input. An unauthenticated remote attacker with administrative privileges can exploit this vulnerability to execute arbitrary system commands on the device.,,Not provided,unknown versions,2024-06-14
+ASUS,Unknown,Unknown,CVE-2024-31163,ASUS Download Master has a buffer overflow vulnerability. An unauthenticated remote attacker with administrative privileges can exploit this vulnerability to execute arbitrary system commands on the device.,,Not provided,unknown versions,2024-06-14
+ASUS,Unknown,ASUSTeK,CVE-2024-33218,An issue in the component AsUpIO64.sys of ASUSTeK Computer Inc ASUS USB 3.0 Boost Storage Driver 5.30.20.0 allows attackers to escalate privileges and execute arbitrary code via sending crafted IOCTL requests.,,Not provided,unknown versions,2024-05-22
+ASUS,Unknown,ASUSTeK,CVE-2024-33219,An issue in the component AsIO64.sys of ASUSTeK Computer Inc ASUS SABERTOOTH X99 Driver v1.0.1.0 allows attackers to escalate privileges and execute arbitrary code via sending crafted IOCTL requests.,,Not provided,unknown versions,2024-05-22
+ASUS,Unknown,ASUSTeK,CVE-2024-33220,An issue in the component AslO3_64.sys of ASUSTeK Computer Inc AISuite3 v3.03.36 3.03.36 allows attackers to escalate privileges and execute arbitrary code via sending crafted IOCTL requests.,,Not provided,unknown versions,2024-05-22
+ASUS,BIOS/Firmware,"ASUSTeK, AsusBSItf",CVE-2024-33221,An issue in the component AsusBSItf.sys of ASUSTeK Computer Inc ASUS BIOS Flash Driver v3.2.12.0 allows attackers to escalate privileges and execute arbitrary code via sending crafted IOCTL requests.,,Not provided,unknown versions,2024-05-22
+ASUS,Unknown,ASUSTeK,CVE-2024-33222,An issue in the component ATSZIO64.sys of ASUSTeK Computer Inc ASUS ATSZIO Driver v0.2.1.7 allows attackers to escalate privileges and execute arbitrary code via sending crafted IOCTL requests.,,Not provided,unknown versions,2024-05-22
+ASUS,Graphics Card,ASUSTeK,CVE-2024-33223,An issue in the component IOMap64.sys of ASUSTeK Computer Inc ASUS GPU TweakII v1.4.5.2 allows attackers to escalate privileges and execute arbitrary code via sending crafted IOCTL requests.,,Not provided,unknown versions,2024-05-22
+ASUS,Router,RT-AX88U,CVE-2024-33278,Buffer Overflow vulnerability in ASUS router RT-AX88U with firmware versions v3.0.0.4.388_24198 allows a remote attacker to execute arbitrary code via the connection_state_machine due to improper length validation for the cookie field.,,https://www.asus.com/content/asus-product-security-advisory/,unknown versions,2024-06-24
+ASUS,Router,Router,CVE-2024-3912,Certain models of ASUS routers have an arbitrary firmware upload vulnerability. An unauthenticated remote attacker can exploit this vulnerability to execute arbitrary system commands on the device.,,Not provided,unknown versions,2024-06-14
+ASUS,BIOS/Firmware,linux_kernel,CVE-2024-40907,"In the Linux kernel, the following vulnerability has been resolved:
+
+ionic: fix kernel panic in XDP_TX action
+
+In the XDP_TX path, ionic driver sends a packet to the TX path with rx
+page and corresponding dma address.
+After tx is done, ionic_tx_clean() frees that page.
+But RX ring buffer isn't reset to NULL.
+So, it uses a freed page, which causes kernel panic.
+
+BUG: unable to handle page fault for address: ffff8881576c110c
+PGD 773801067 P4D 773801067 PUD 87f086067 PMD 87efca067 PTE 800ffffea893e060
+Oops: Oops: 0000 [#1] PREEMPT SMP DEBUG_PAGEALLOC KASAN NOPTI
+CPU: 1 PID: 25 Comm: ksoftirqd/1 Not tainted 6.9.0+ #11
+Hardware name: ASUS System Product Name/PRIME Z690-P D4, BIOS 0603 11/01/2021
+RIP: 0010:bpf_prog_f0b8caeac1068a55_balancer_ingress+0x3b/0x44f
+Code: 00 53 41 55 41 56 41 57 b8 01 00 00 00 48 8b 5f 08 4c 8b 77 00 4c 89 f7 48 83 c7 0e 48 39 d8
+RSP: 0018:ffff888104e6fa28 EFLAGS: 00010283
+RAX: 0000000000000002 RBX: ffff8881576c1140 RCX: 0000000000000002
+RDX: ffffffffc0051f64 RSI: ffffc90002d33048 RDI: ffff8881576c110e
+RBP: ffff888104e6fa88 R08: 0000000000000000 R09: ffffed1027a04a23
+R10: 0000000000000000 R11: 0000000000000000 R12: ffff8881b03a21a8
+R13: ffff8881589f800f R14: ffff8881576c1100 R15: 00000001576c1100
+FS: 0000000000000000(0000) GS:ffff88881ae00000(0000) knlGS:0000000000000000
+CS: 0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: ffff8881576c110c CR3: 0000000767a90000 CR4: 00000000007506f0
+PKRU: 55555554
+Call Trace:
+<TASK>
+? __die+0x20/0x70
+? page_fault_oops+0x254/0x790
+? __pfx_page_fault_oops+0x10/0x10
+? __pfx_is_prefetch.constprop.0+0x10/0x10
+? search_bpf_extables+0x165/0x260
+? fixup_exception+0x4a/0x970
+? exc_page_fault+0xcb/0xe0
+? asm_exc_page_fault+0x22/0x30
+? 0xffffffffc0051f64
+? bpf_prog_f0b8caeac1068a55_balancer_ingress+0x3b/0x44f
+? do_raw_spin_unlock+0x54/0x220
+ionic_rx_service+0x11ab/0x3010 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+? ionic_tx_clean+0x29b/0xc60 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+? __pfx_ionic_tx_clean+0x10/0x10 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+? __pfx_ionic_rx_service+0x10/0x10 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+? ionic_tx_cq_service+0x25d/0xa00 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+? __pfx_ionic_rx_service+0x10/0x10 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+ionic_cq_service+0x69/0x150 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+ionic_txrx_napi+0x11a/0x540 [ionic 9180c3001ab627d82bbc5f3ebe8a0decaf6bb864]
+__napi_poll.constprop.0+0xa0/0x440
+net_rx_action+0x7e7/0xc30
+? __pfx_net_rx_action+0x10/0x10",Local,Not provided,"2.3, 2.3 (before 6.9.6)",2024-07-12
+ASUS,Router,RT-N15U,CVE-2024-42757,Command injection vulnerability in Asus RT-N15U 3.0.0.4.376_3754 allows a remote attacker to execute arbitrary code via the netstat function page.,,Not provided,unknown versions,2024-08-15
+ASUS,Unknown,android,CVE-2024-43081,"In installExistingPackageAsUser of InstallPackageHelper.java, there is a possible carrier restriction bypass due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",Local,https://source.android.com/security/bulletin/2024-11-01,2.3,2024-11-13
+ASUS,BIOS/Firmware,linux_kernel,CVE-2024-43834,"In the Linux kernel, the following vulnerability has been resolved:
+
+xdp: fix invalid wait context of page_pool_destroy()
+
+If the driver uses a page pool, it creates a page pool with
+page_pool_create().
+The reference count of page pool is 1 as default.
+A page pool will be destroyed only when a reference count reaches 0.
+page_pool_destroy() is used to destroy page pool, it decreases a
+reference count.
+When a page pool is destroyed, ->disconnect() is called, which is
+mem_allocator_disconnect().
+This function internally acquires mutex_lock().
+
+If the driver uses XDP, it registers a memory model with
+xdp_rxq_info_reg_mem_model().
+The xdp_rxq_info_reg_mem_model() internally increases a page pool
+reference count if a memory model is a page pool.
+Now the reference count is 2.
+
+To destroy a page pool, the driver should call both page_pool_destroy()
+and xdp_unreg_mem_model().
+The xdp_unreg_mem_model() internally calls page_pool_destroy().
+Only page_pool_destroy() decreases a reference count.
+
+If a driver calls page_pool_destroy() then xdp_unreg_mem_model(), we
+will face an invalid wait context warning.
+Because xdp_unreg_mem_model() calls page_pool_destroy() with
+rcu_read_lock().
+The page_pool_destroy() internally acquires mutex_lock().
+
+Splat looks like:
+=============================
+[ BUG: Invalid wait context ]
+6.10.0-rc6+ #4 Tainted: G W
+-----------------------------
+ethtool/1806 is trying to lock:
+ffffffff90387b90 (mem_id_lock){+.+.}-{4:4}, at: mem_allocator_disconnect+0x73/0x150
+other info that might help us debug this:
+context-{5:5}
+3 locks held by ethtool/1806:
+stack backtrace:
+CPU: 0 PID: 1806 Comm: ethtool Tainted: G W 6.10.0-rc6+ #4 f916f41f172891c800f2fed
+Hardware name: ASUS System Product Name/PRIME Z690-P D4, BIOS 0603 11/01/2021
+Call Trace:
+<TASK>
+dump_stack_lvl+0x7e/0xc0
+__lock_acquire+0x1681/0x4de0
+? _printk+0x64/0xe0
+? __pfx_mark_lock.part.0+0x10/0x10
+? __pfx___lock_acquire+0x10/0x10
+lock_acquire+0x1b3/0x580
+? mem_allocator_disconnect+0x73/0x150
+? __wake_up_klogd.part.0+0x16/0xc0
+? __pfx_lock_acquire+0x10/0x10
+? dump_stack_lvl+0x91/0xc0
+__mutex_lock+0x15c/0x1690
+? mem_allocator_disconnect+0x73/0x150
+? __pfx_prb_read_valid+0x10/0x10
+? mem_allocator_disconnect+0x73/0x150
+? __pfx_llist_add_batch+0x10/0x10
+? console_unlock+0x193/0x1b0
+? lockdep_hardirqs_on+0xbe/0x140
+? __pfx___mutex_lock+0x10/0x10
+? tick_nohz_tick_stopped+0x16/0x90
+? __irq_work_queue_local+0x1e5/0x330
+? irq_work_queue+0x39/0x50
+? __wake_up_klogd.part.0+0x79/0xc0
+? mem_allocator_disconnect+0x73/0x150
+mem_allocator_disconnect+0x73/0x150
+? __pfx_mem_allocator_disconnect+0x10/0x10
+? mark_held_locks+0xa5/0xf0
+? rcu_is_watching+0x11/0xb0
+page_pool_release+0x36e/0x6d0
+page_pool_destroy+0xd7/0x440
+xdp_unreg_mem_model+0x1a7/0x2a0
+? __pfx_xdp_unreg_mem_model+0x10/0x10
+? kfree+0x125/0x370
+? bnxt_free_ring.isra.0+0x2eb/0x500
+? bnxt_free_mem+0x5ac/0x2500
+xdp_rxq_info_unreg+0x4a/0xd0
+bnxt_free_mem+0x1356/0x2500
+bnxt_close_nic+0xf0/0x3b0
+? __pfx_bnxt_close_nic+0x10/0x10
+? ethnl_parse_bit+0x2c6/0x6d0
+? __pfx___nla_validate_parse+0x10/0x10
+? __pfx_ethnl_parse_bit+0x10/0x10
+bnxt_set_features+0x2a8/0x3e0
+__netdev_update_features+0x4dc/0x1370
+? ethnl_parse_bitset+0x4ff/0x750
+? __pfx_ethnl_parse_bitset+0x10/0x10
+? __pfx___netdev_update_features+0x10/0x10
+? mark_held_locks+0xa5/0xf0
+? _raw_spin_unlock_irqrestore+0x42/0x70
+? __pm_runtime_resume+0x7d/0x110
+ethnl_set_features+0x32d/0xa20
+
+To fix this problem, it uses rhashtable_lookup_fast() instead of
+rhashtable_lookup() with rcu_read_lock().
+Using xa without rcu_read_lock() here is safe.
+xa is freed by __xdp_mem_allocator_rcu_free() and this is called by
+call_rcu() of mem_xa_remove().
+The mem_xa_remove() is called by page_pool_destroy() if a reference
+count reaches 0.
+The xa is already protected by the reference count mechanism well in the
+control plane.
+So removing rcu_read_lock() for page_pool_destroy() is safe.",Local,Not provided,"2.3 (before 6.6.44), 2.3 (before 6.10.3), 2.3 (before 5.5), 2.3 (before 5.4), 2.3 (before 6.1.103)",2024-08-17
+ASUS,BIOS/Firmware,linux_kernel,CVE-2024-53090,"In the Linux kernel, the following vulnerability has been resolved:
+
+afs: Fix lock recursion
+
+afs_wake_up_async_call() can incur lock recursion.  The problem is that it
+is called from AF_RXRPC whilst holding the ->notify_lock, but it tries to
+take a ref on the afs_call struct in order to pass it to a work queue - but
+if the afs_call is already queued, we then have an extraneous ref that must
+be put... calling afs_put_call() may call back down into AF_RXRPC through
+rxrpc_kernel_shutdown_call(), however, which might try taking the
+->notify_lock again.
+
+This case isn't very common, however, so defer it to a workqueue.  The oops
+looks something like:
+
+  BUG: spinlock recursion on CPU#0, krxrpcio/7001/1646
+   lock: 0xffff888141399b30, .magic: dead4ead, .owner: krxrpcio/7001/1646, .owner_cpu: 0
+  CPU: 0 UID: 0 PID: 1646 Comm: krxrpcio/7001 Not tainted 6.12.0-rc2-build3+ #4351
+  Hardware name: ASUS All Series/H97-PLUS, BIOS 2306 10/09/2014
+  Call Trace:
+   <TASK>
+   dump_stack_lvl+0x47/0x70
+   do_raw_spin_lock+0x3c/0x90
+   rxrpc_kernel_shutdown_call+0x83/0xb0
+   afs_put_call+0xd7/0x180
+   rxrpc_notify_socket+0xa0/0x190
+   rxrpc_input_split_jumbo+0x198/0x1d0
+   rxrpc_input_data+0x14b/0x1e0
+   ? rxrpc_input_call_packet+0xc2/0x1f0
+   rxrpc_input_call_event+0xad/0x6b0
+   rxrpc_input_packet_on_conn+0x1e1/0x210
+   rxrpc_input_packet+0x3f2/0x4d0
+   rxrpc_io_thread+0x243/0x410
+   ? __pfx_rxrpc_io_thread+0x10/0x10
+   kthread+0xcf/0xe0
+   ? __pfx_kthread+0x10/0x10
+   ret_from_fork+0x24/0x40
+   ? __pfx_kthread+0x10/0x10
+   ret_from_fork_asm+0x1a/0x30
+   </TASK>",Local,Not provided,"2.3, 2.3 (before 6.11.9)",2024-11-21
+ASUS,Unknown,AsusSAIO,CVE-2024-55408,An improper access control vulnerability in the AsusSAIO.sys driver may lead to the misuse of software functionality utilizing the driver when crafted IOCTL requests are supplied.,,http://asus.com | https://www.asus.com/tw/support/myasus-deeplink/,unknown versions,2025-01-06
+ASUS,Graphics Card,linux_kernel,CVE-2024-56542,"In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amd/display: fix a memleak issue when driver is removed
+
+Running ""modprobe amdgpu"" the second time (followed by a modprobe -r
+amdgpu) causes a call trace like:
+
+[  845.212163] Memory manager not clean during takedown.
+[  845.212170] WARNING: CPU: 4 PID: 2481 at drivers/gpu/drm/drm_mm.c:999 drm_mm_takedown+0x2b/0x40
+[  845.212177] Modules linked in: amdgpu(OE-) amddrm_ttm_helper(OE) amddrm_buddy(OE) amdxcp(OE) amd_sched(OE) drm_exec drm_suballoc_helper drm_display_helper i2c_algo_bit amdttm(OE) amdkcl(OE) cec rc_core sunrpc qrtr intel_rapl_msr intel_rapl_common snd_hda_codec_hdmi edac_mce_amd snd_hda_intel snd_intel_dspcfg snd_intel_sdw_acpi snd_usb_audio snd_hda_codec snd_usbmidi_lib kvm_amd snd_hda_core snd_ump mc snd_hwdep kvm snd_pcm snd_seq_midi snd_seq_midi_event irqbypass crct10dif_pclmul snd_rawmidi polyval_clmulni polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 snd_seq aesni_intel crypto_simd snd_seq_device cryptd snd_timer mfd_aaeon asus_nb_wmi eeepc_wmi joydev asus_wmi snd ledtrig_audio sparse_keymap ccp wmi_bmof input_leds k10temp i2c_piix4 platform_profile rapl soundcore gpio_amdpt mac_hid binfmt_misc msr parport_pc ppdev lp parport efi_pstore nfnetlink dmi_sysfs ip_tables x_tables autofs4 hid_logitech_hidpp hid_logitech_dj hid_generic usbhid hid ahci xhci_pci igc crc32_pclmul libahci xhci_pci_renesas video
+[  845.212284]  wmi [last unloaded: amddrm_ttm_helper(OE)]
+[  845.212290] CPU: 4 PID: 2481 Comm: modprobe Tainted: G        W  OE      6.8.0-31-generic #31-Ubuntu
+[  845.212296] RIP: 0010:drm_mm_takedown+0x2b/0x40
+[  845.212300] Code: 1f 44 00 00 48 8b 47 38 48 83 c7 38 48 39 f8 75 09 31 c0 31 ff e9 90 2e 86 00 55 48 c7 c7 d0 f6 8e 8a 48 89 e5 e8 f5 db 45 ff <0f> 0b 5d 31 c0 31 ff e9 74 2e 86 00 66 0f 1f 84 00 00 00 00 00 90
+[  845.212302] RSP: 0018:ffffb11302127ae0 EFLAGS: 00010246
+[  845.212305] RAX: 0000000000000000 RBX: ffff92aa5020fc08 RCX: 0000000000000000
+[  845.212307] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[  845.212309] RBP: ffffb11302127ae0 R08: 0000000000000000 R09: 0000000000000000
+[  845.212310] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000004
+[  845.212312] R13: ffff92aa50200000 R14: ffff92aa5020fb10 R15: ffff92aa5020faa0
+[  845.212313] FS:  0000707dd7c7c080(0000) GS:ffff92b93de00000(0000) knlGS:0000000000000000
+[  845.212316] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  845.212318] CR2: 00007d48b0aee200 CR3: 0000000115a58000 CR4: 0000000000f50ef0
+[  845.212320] PKRU: 55555554
+[  845.212321] Call Trace:
+[  845.212323]  <TASK>
+[  845.212328]  ? show_regs+0x6d/0x80
+[  845.212333]  ? __warn+0x89/0x160
+[  845.212339]  ? drm_mm_takedown+0x2b/0x40
+[  845.212344]  ? report_bug+0x17e/0x1b0
+[  845.212350]  ? handle_bug+0x51/0xa0
+[  845.212355]  ? exc_invalid_op+0x18/0x80
+[  845.212359]  ? asm_exc_invalid_op+0x1b/0x20
+[  845.212366]  ? drm_mm_takedown+0x2b/0x40
+[  845.212371]  amdgpu_gtt_mgr_fini+0xa9/0x130 [amdgpu]
+[  845.212645]  amdgpu_ttm_fini+0x264/0x340 [amdgpu]
+[  845.212770]  amdgpu_bo_fini+0x2e/0xc0 [amdgpu]
+[  845.212894]  gmc_v12_0_sw_fini+0x2a/0x40 [amdgpu]
+[  845.213036]  amdgpu_device_fini_sw+0x11a/0x590 [amdgpu]
+[  845.213159]  amdgpu_driver_release_kms+0x16/0x40 [amdgpu]
+[  845.213302]  devm_drm_dev_init_release+0x5e/0x90
+[  845.213305]  devm_action_release+0x12/0x30
+[  845.213308]  release_nodes+0x42/0xd0
+[  845.213311]  devres_release_all+0x97/0xe0
+[  845.213314]  device_unbind_cleanup+0x12/0x80
+[  845.213317]  device_release_driver_internal+0x230/0x270
+[  845.213319]  ? srso_alias_return_thunk+0x5/0xfbef5
+
+This is caused by lost memory during early init phase. First time driver
+is removed, memory is freed but when second time the driver is inserted,
+VBIOS dmub is not active, since the PSP policy is to retain the driver
+loaded version on subsequent warm boots. Hence, communication with VBIOS
+DMUB fails.
+
+Fix this by aborting further comm
+---truncated---",Local,Not provided,"2.3 (before 6.12.2), 2.3 (before 6.11.11)",2024-12-27
+ASUS,Graphics Card,linux_kernel,CVE-2024-56551,"In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amdgpu: fix usage slab after free
+
+[  +0.000021] BUG: KASAN: slab-use-after-free in drm_sched_entity_flush+0x6cb/0x7a0 [gpu_sched]
+[  +0.000027] Read of size 8 at addr ffff8881b8605f88 by task amd_pci_unplug/2147
+
+[  +0.000023] CPU: 6 PID: 2147 Comm: amd_pci_unplug Not tainted 6.10.0+ #1
+[  +0.000016] Hardware name: ASUS System Product Name/ROG STRIX B550-F GAMING (WI-FI), BIOS 1401 12/03/2020
+[  +0.000016] Call Trace:
+[  +0.000008]  <TASK>
+[  +0.000009]  dump_stack_lvl+0x76/0xa0
+[  +0.000017]  print_report+0xce/0x5f0
+[  +0.000017]  ? drm_sched_entity_flush+0x6cb/0x7a0 [gpu_sched]
+[  +0.000019]  ? srso_return_thunk+0x5/0x5f
+[  +0.000015]  ? kasan_complete_mode_report_info+0x72/0x200
+[  +0.000016]  ? drm_sched_entity_flush+0x6cb/0x7a0 [gpu_sched]
+[  +0.000019]  kasan_report+0xbe/0x110
+[  +0.000015]  ? drm_sched_entity_flush+0x6cb/0x7a0 [gpu_sched]
+[  +0.000023]  __asan_report_load8_noabort+0x14/0x30
+[  +0.000014]  drm_sched_entity_flush+0x6cb/0x7a0 [gpu_sched]
+[  +0.000020]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? __kasan_check_write+0x14/0x30
+[  +0.000016]  ? __pfx_drm_sched_entity_flush+0x10/0x10 [gpu_sched]
+[  +0.000020]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? __kasan_check_write+0x14/0x30
+[  +0.000013]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? enable_work+0x124/0x220
+[  +0.000015]  ? __pfx_enable_work+0x10/0x10
+[  +0.000013]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? free_large_kmalloc+0x85/0xf0
+[  +0.000016]  drm_sched_entity_destroy+0x18/0x30 [gpu_sched]
+[  +0.000020]  amdgpu_vce_sw_fini+0x55/0x170 [amdgpu]
+[  +0.000735]  ? __kasan_check_read+0x11/0x20
+[  +0.000016]  vce_v4_0_sw_fini+0x80/0x110 [amdgpu]
+[  +0.000726]  amdgpu_device_fini_sw+0x331/0xfc0 [amdgpu]
+[  +0.000679]  ? mutex_unlock+0x80/0xe0
+[  +0.000017]  ? __pfx_amdgpu_device_fini_sw+0x10/0x10 [amdgpu]
+[  +0.000662]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? __kasan_check_write+0x14/0x30
+[  +0.000013]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? mutex_unlock+0x80/0xe0
+[  +0.000016]  amdgpu_driver_release_kms+0x16/0x80 [amdgpu]
+[  +0.000663]  drm_minor_release+0xc9/0x140 [drm]
+[  +0.000081]  drm_release+0x1fd/0x390 [drm]
+[  +0.000082]  __fput+0x36c/0xad0
+[  +0.000018]  __fput_sync+0x3c/0x50
+[  +0.000014]  __x64_sys_close+0x7d/0xe0
+[  +0.000014]  x64_sys_call+0x1bc6/0x2680
+[  +0.000014]  do_syscall_64+0x70/0x130
+[  +0.000014]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? irqentry_exit_to_user_mode+0x60/0x190
+[  +0.000015]  ? srso_return_thunk+0x5/0x5f
+[  +0.000014]  ? irqentry_exit+0x43/0x50
+[  +0.000012]  ? srso_return_thunk+0x5/0x5f
+[  +0.000013]  ? exc_page_fault+0x7c/0x110
+[  +0.000015]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[  +0.000014] RIP: 0033:0x7ffff7b14f67
+[  +0.000013] Code: ff e8 0d 16 02 00 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 00 f3 0f 1e fa 64 8b 04 25 18 00 00 00 85 c0 75 10 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 41 c3 48 83 ec 18 89 7c 24 0c e8 73 ba f7 ff
+[  +0.000026] RSP: 002b:00007fffffffe378 EFLAGS: 00000246 ORIG_RAX: 0000000000000003
+[  +0.000019] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007ffff7b14f67
+[  +0.000014] RDX: 0000000000000000 RSI: 00007ffff7f6f47a RDI: 0000000000000003
+[  +0.000014] RBP: 00007fffffffe3a0 R08: 0000555555569890 R09: 0000000000000000
+[  +0.000014] R10: 0000000000000000 R11: 0000000000000246 R12: 00007fffffffe5c8
+[  +0.000013] R13: 00005555555552a9 R14: 0000555555557d48 R15: 00007ffff7ffd040
+[  +0.000020]  </TASK>
+
+[  +0.000016] Allocated by task 383 on cpu 7 at 26.880319s:
+[  +0.000014]  kasan_save_stack+0x28/0x60
+[  +0.000008]  kasan_save_track+0x18/0x70
+[  +0.000007]  kasan_save_alloc_info+0x38/0x60
+[  +0.000007]  __kasan_kmalloc+0xc1/0xd0
+[  +0.000007]  kmalloc_trace_noprof+0x180/0x380
+[  +0.000007]  drm_sched_init+0x411/0xec0 [gpu_sched]
+[  +0.000012]  amdgpu_device_init+0x695f/0xa610 [amdgpu]
+[  +0.000658]  amdgpu_driver_load_kms+0x1a/0x120 [amdgpu]
+[  +0.000662]  amdgpu_pci_p
+---truncated---",Local,Not provided,"2.3 (before 6.6.64), 2.3 (before 6.12.4)",2024-12-27
+ASUS,Mini PC,"vc65-c1_firmware,pb60v_firmware,pb60g_firmware,pb60s_firmware,pa90_firmware,pb50_firmware,pb60_firmware,pb61v_firmware,ts10_firmware,pn40_firmware,pn60_firmware,pn30_firmware,un65u_firmware",CVE-2022-21933,"ASUS VivoMini/Mini PC device has an improper input validation vulnerability. A local attacker with system privilege can use system management interrupt (SMI) to modify memory, resulting in arbitrary code execution for controlling the system or disrupting service.",Local,Not provided,"2.3 (before 1302), 2.3 (before 609), 2.3 (before 618), 2.3 (before 808), 2.3 (before 320), 2.3 (before 1502), 2.3 (before 1401), 2.3 (before 601), 2.3 (before 2201), 2.3 (before 902)",2022-01-21
+ASUS,Unknown,rt-ax56u_firmware,CVE-2022-22054,"ASUS RT-AX56U’s login function contains a path traversal vulnerability due to its inadequate filtering for special characters in URL parameters, which allows an unauthenticated local area network attacker to access restricted system paths and download arbitrary files.",Adjacent Network,Not provided,2.3,2022-01-14
+ASUS,Unknown,rog_live_service,CVE-2022-22262,"ROG Live Service’s function for deleting temp files created by installation has an improper link resolution before file access vulnerability. Since this function does not validate the path before deletion, an unauthenticated local attacker can create an unexpected symbolic link to system file path, to delete arbitrary system files and disrupt system service.",Local,Not provided,2.3 (before 1.3.3.0),2022-03-01
+ASUS,Unknown,myasus,CVE-2022-22814,The System Diagnosis service of MyASUS before 3.1.2.0 allows privilege escalation.,Network,https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3 (before 3.1.2.0),2022-03-10
+ASUS,Unknown,rt-ax56u_firmware,CVE-2022-23970,"ASUS RT-AX56U’s update_json function has a path traversal vulnerability due to insufficient filtering for special characters in the URL parameter. An unauthenticated LAN attacker can overwrite a system file by uploading another file with the same file name, which results in service disruption.",Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,rt-ax56u_firmware,CVE-2022-23971,"ASUS RT-AX56U’s update_PLC/PORT file has a path traversal vulnerability due to insufficient filtering for special characters in the URL parameter. An unauthenticated LAN attacker can overwrite a system file by uploading another PLC/PORT file with the same file name, which results in service disruption.",Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,rt-ax56u_firmware,CVE-2022-23972,"ASUS RT-AX56U’s SQL handling function has an SQL injection vulnerability due to insufficient user input validation. An unauthenticated LAN attacker to inject arbitrary SQL code to read, modify and delete database.",Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,rt-ax56u_firmware,CVE-2022-23973,ASUS RT-AX56U’s user profile configuration function is vulnerable to stack-based buffer overflow due to insufficient validation for parameter length. An unauthenticated LAN attacker can execute arbitrary code to perform arbitrary operations or disrupt service.,Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,rt-ac86u_firmware,CVE-2022-25595,"ASUS RT-AC86U has improper user request handling, which allows an unauthenticated LAN attacker to cause a denial of service by sending particular request a server-to-client reply attempt.",Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,rt-ac86u_firmware,CVE-2022-25596,"ASUS RT-AC56U’s configuration function has a heap-based buffer overflow vulnerability due to insufficient validation for the decryption parameter length, which allows an unauthenticated LAN attacker to execute arbitrary code, perform arbitrary operations and disrupt service.",Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,rt-ac86u_firmware,CVE-2022-25597,"ASUS RT-AC86U’s LPD service has insufficient filtering for special characters in the user request, which allows an unauthenticated LAN attacker to perform command injection attack, execute arbitrary commands and disrupt or terminate service.",Adjacent Network,Not provided,2.3,2022-04-07
+ASUS,Unknown,"asuswrt,new_gen,xt8_firmware,tuf-ax3000_v2_firmware,xd4_firmware,et12_firmware,gt-ax6000_firmware,xt12_firmware,rt-ax58u_firmware,xt9_firmware,xd6_firmware,gt-ax11000_pro_firmware,gt-axe16000_firmware,rt-ax86u_firmware,rt-ax68u_firmware,rt-ax82u_firmware,rt-ax56u_firmware,rt-ax55_firmware,gt-ax11000_firmware",CVE-2022-26376,A memory corruption vulnerability exists in the httpd unescape functionality of Asuswrt prior to 3.0.0.4.386_48706 and Asuswrt-Merlin New Gen prior to 386.7.. A specially-crafted HTTP request can lead to memory corruption. An attacker can send a network request to trigger this vulnerability.,Network,Not provided,"2.3 (before 3.0.0.4.386_49356), 2.3 (before 3.0.0.4.386_48706), 2.3 (before 3.0.0.4.386_48996), 2.3 (before 3.0.0.4.386_49380), 2.3 (before 3.0.0.4.386_49447), 2.3 (before 3.0.0.4.386_48786), 2.3 (before 3.0.0.4.386_49479), 2.3 (before 3.0.0.4.386_48790), 2.3 (before 3.0.0.4.386_48750), 2.3 (before 3.0.0.4.386_48823), 2.3 (before 3.0.0.4.386_49559), 2.3 (before 386.7), 2.3 (before 3.0.0.4.388_20027), 2.3 (before 3.0.0.4.386_48908)",2022-08-05
+ASUS,Unknown,control_center,CVE-2022-26668,ASUS Control Center API has a broken access control vulnerability. An unauthenticated remote attacker can call privileged API functions to perform partial system operations or cause partial disrupt of service.,Network,Not provided,2.3,2022-06-20
+ASUS,Unknown,control_center,CVE-2022-26669,ASUS Control Center is vulnerable to SQL injection. An authenticated remote attacker with general user privilege can inject SQL command to specific API parameters to acquire database schema or access data.,Network,Not provided,2.3,2022-06-20
+ASUS,Unknown,webstorage,CVE-2022-26672,"ASUS WebStorage has a hardcoded API Token in the APP source code. An unauthenticated remote attacker can use this token to establish connections with the server and carry out login attempts to general user accounts. A successful login to a general user account allows the attacker to access, modify or delete this user account information.",Network,Not provided,2.3 (before 3.10.2),2022-04-22
+ASUS,Unknown,rt-ax88u_firmware,CVE-2022-26673,ASUS RT-AX88U has insufficient filtering for special characters in the HTTP header parameter. A remote attacker with general user privilege can exploit this vulnerability to inject JavaScript and perform Stored Cross-Site Scripting (XSS) attacks.,Network,Not provided,2.3 (before 3.0.0.4.386.46065),2022-04-22
+ASUS,Unknown,rt-ax88u_firmware,CVE-2022-26674,"ASUS RT-AX88U has a Format String vulnerability, which allows an unauthenticated remote attacker to write to arbitrary memory address and perform remote arbitrary code execution, arbitrary system operation or disrupt service.",Network,Not provided,2.3 (before 3.0.0.4.386.46065),2022-04-22
+ASUS,Unknown,Unknown,CVE-2022-29974,"AMI (aka American Megatrends) NTFS driver 1.0.0 (fixed in late 2021 or early 2022) has a buffer overflow. This driver is, for example, used in certain ASUS devices.",,Not provided,unknown versions,2024-12-09
+ASUS,Unknown,rt-n53_firmware,CVE-2022-31874,ASUS RT-N53 3.0.0.4.376.3754 has a command injection vulnerability in the SystemCmd parameter of the apply.cgi interface.,Network,Not provided,2.3,2022-06-17
+ASUS,Router,dsl-n14u-b1_firmware,CVE-2022-32988,"Cross Site Scripting (XSS) vulnerability in router Asus DSL-N14U-B1 1.1.2.3_805 via the ""*list"" parameters (e.g. filter_lwlist, keyword_rulelist, etc) in every "".asp"" page containing a list of stored strings. The following asp files are affected: (1) cgi-bin/APP_Installation.asp, (2) cgi-bin/Advanced_ACL_Content.asp, (3) cgi-bin/Advanced_ADSL_Content.asp, (4) cgi-bin/Advanced_ASUSDDNS_Content.asp, (5) cgi-bin/Advanced_AiDisk_ftp.asp, (6) cgi-bin/Advanced_AiDisk_samba.asp, (7) cgi-bin/Advanced_DSL_Content.asp, (8) cgi-bin/Advanced_Firewall_Content.asp, (9) cgi-bin/Advanced_FirmwareUpgrade_Content.asp, (10) cgi-bin/Advanced_GWStaticRoute_Content.asp, (11) cgi-bin/Advanced_IPTV_Content.asp, (12) cgi-bin/Advanced_IPv6_Content.asp, (13) cgi-bin/Advanced_KeywordFilter_Content.asp, (14) cgi-bin/Advanced_LAN_Content.asp, (15) cgi-bin/Advanced_Modem_Content.asp, (16) cgi-bin/Advanced_PortTrigger_Content.asp, (17) cgi-bin/Advanced_QOSUserPrio_Content.asp, (18) cgi-bin/Advanced_QOSUserRules_Content.asp, (19) cgi-bin/Advanced_SettingBackup_Content.asp, (20) cgi-bin/Advanced_System_Content.asp, (21) cgi-bin/Advanced_URLFilter_Content.asp, (22) cgi-bin/Advanced_VPN_PPTP.asp, (23) cgi-bin/Advanced_VirtualServer_Content.asp, (24) cgi-bin/Advanced_WANPort_Content.asp, (25) cgi-bin/Advanced_WAdvanced_Content.asp, (26) cgi-bin/Advanced_WMode_Content.asp, (27) cgi-bin/Advanced_WWPS_Content.asp, (28) cgi-bin/Advanced_Wireless_Content.asp, (29) cgi-bin/Bandwidth_Limiter.asp, (30) cgi-bin/Guest_network.asp, (31) cgi-bin/Main_AccessLog_Content.asp, (32) cgi-bin/Main_AdslStatus_Content.asp, (33) cgi-bin/Main_Spectrum_Content.asp, (34) cgi-bin/Main_WebHistory_Content.asp, (35) cgi-bin/ParentalControl.asp, (36) cgi-bin/QIS_wizard.asp, (37) cgi-bin/QoS_EZQoS.asp, (38) cgi-bin/aidisk.asp, (39) cgi-bin/aidisk/Aidisk-1.asp, (40) cgi-bin/aidisk/Aidisk-2.asp, (41) cgi-bin/aidisk/Aidisk-3.asp, (42) cgi-bin/aidisk/Aidisk-4.asp, (43) cgi-bin/blocking.asp, (44) cgi-bin/cloud_main.asp, (45) cgi-bin/cloud_router_sync.asp, (46) cgi-bin/cloud_settings.asp, (47) cgi-bin/cloud_sync.asp, (48) cgi-bin/device-map/DSL_dashboard.asp, (49) cgi-bin/device-map/clients.asp, (50) cgi-bin/device-map/disk.asp, (51) cgi-bin/device-map/internet.asp, (52) cgi-bin/error_page.asp, (53) cgi-bin/index.asp, (54) cgi-bin/index2.asp, (55) cgi-bin/qis/QIS_PTM_manual_setting.asp, (56) cgi-bin/qis/QIS_admin_pass.asp, (57) cgi-bin/qis/QIS_annex_setting.asp, (58) cgi-bin/qis/QIS_bridge_cfg_tmp.asp, (59) cgi-bin/qis/QIS_detect.asp, (60) cgi-bin/qis/QIS_finish.asp, (61) cgi-bin/qis/QIS_ipoa_cfg_tmp.asp, (62) cgi-bin/qis/QIS_manual_setting.asp, (63) cgi-bin/qis/QIS_mer_cfg.asp, (64) cgi-bin/qis/QIS_mer_cfg_tmp.asp, (65) cgi-bin/qis/QIS_ppp_cfg.asp, (66) cgi-bin/qis/QIS_ppp_cfg_tmp.asp, (67) cgi-bin/qis/QIS_wireless.asp, (68) cgi-bin/query_wan_status.asp, (69) cgi-bin/query_wan_status2.asp, and (70) cgi-bin/start_apply.asp.",Network,Not provided,2.3,2022-07-01
+ASUS,Unknown,rt-ax82u_firmware,CVE-2022-35401,An authentication bypass vulnerability exists in the get_IFTTTTtoken.cgi functionality of Asus RT-AX82U 3.0.0.4.386_49674-ge182230. A specially-crafted HTTP request can lead to full administrative access to the device. An attacker would need to send a series of HTTP requests to exploit this vulnerability.,Network,Not provided,2.3,2023-01-10
+ASUS,Unknown,aura_ready_game_software_development_kit,CVE-2022-35899,There is an unquoted service path in ASUSTeK Aura Ready Game SDK service (GameSDK.exe) 1.0.0.4. This might allow a local user to escalate privileges by creating a %PROGRAMFILES(X86)%\ASUS\GameSDK.exe file.,Local,https://packetstormsecurity.com/files/167763/Asus-GameSDK-1.0.0.4-Unquoted-Service-Path.html,2.3,2022-07-21
+ASUS,Unknown,"asusswitch,system_control_interface",CVE-2022-36438,"AsusSwitch.exe on ASUS personal computers (running Windows) sets weak file permissions, leading to local privilege escalation (this also can be used to delete files within the system arbitrarily). This affects ASUS System Control Interface 3 before 3.1.5.0, and AsusSwitch.exe before 1.0.10.0.",Local,https://asus-my.sharepoint.com/personal/carinacw_li_asus_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcarinacw_li_asus_com%2FDocuments%2FSecurity%2FCase-220713%2FAsus%20Switch%20LPE.pdf&parent=%2Fpersonal%2Fcarinacw_li_asus_com%2FDocuments%2FSecurity%2FCase-220713&ga=1 | https://asus.com,"2.3 (before 3.1.5.0), 2.3 (before 1.0.10.0)",2022-10-18
+ASUS,Unknown,"system_control_interface,asusliveupdate,asussoftwaremanger",CVE-2022-36439,"AsusSoftwareManager.exe in ASUS System Control Interface on ASUS personal computers (running Windows) allows a local user to write into the Temp directory and delete another more privileged file via SYSTEM privileges. This affects ASUS System Control Interface 3 before 3.1.5.0, AsusSoftwareManger.exe before 1.0.53.0, and AsusLiveUpdate.dll before 1.0.45.0.",Local,https://asus-my.sharepoint.com/personal/carinacw_li_asus_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcarinacw_li_asus_com%2FDocuments%2FSecurity%2FCase-220713%2FAsus%20Arbitary%20File%20Deletion.pdf&parent=%2Fpersonal%2Fcarinacw_li_asus_com%2FDocuments%2FSecurity%2FCase-220713&ga=1 | https://asus.com,"2.3 (before 1.0.45.0), 2.3 (before 3.1.5.0), 2.3 (before 1.0.53.0)",2022-10-18
+ASUS,Unknown,adm,CVE-2022-37398,"A stack-based buffer overflow vulnerability was found inside ADM when using WebDAV due to the lack of data size validation. An attacker can exploit this vulnerability to run arbitrary code. Affected ADM versions include: 3.5.9.RUE3 and below, 4.0.5.RVI1 and below as well as 4.1.0.RJD1 and below.",Network,https://www.asustor.com/security/security_advisory_detail?id=12,"2.3 (up to 3.5.9.rue3), 2.3 (up to 4.1.0.rjd1), 2.3 (up to 4.0.5.rvi1)",2022-08-05
+ASUS,Router,rt-ax82u_firmware,CVE-2022-38105,An information disclosure vulnerability exists in the cm_processREQ_NC opcode of Asus RT-AX82U 3.0.0.4.386_49674-ge182230 router's configuration service. A specially-crafted network packets can lead to a disclosure of sensitive information. An attacker can send a network request to trigger this vulnerability.,Network,Not provided,2.3,2023-01-10
+ASUS,Router,rt-ax82u_firmware,CVE-2022-38393,A denial of service vulnerability exists in the cfg_server cm_processConnDiagPktList opcode of Asus RT-AX82U 3.0.0.4.386_49674-ge182230 router's configuration service. A specially-crafted network packet can lead to denial of service. An attacker can send a malicious packet to trigger this vulnerability.,Network,Not provided,2.3,2023-01-10
+ASUS,Unknown,armoury_crate_service,CVE-2022-38699,"Armoury Crate Service’s logging function has insufficient validation to check if the log file is a symbolic link. A physical attacker with general user privilege can modify the log file property to a symbolic link that points to arbitrary system file, causing the logging function to overwrite the system file and disrupt the system.",,Not provided,2.3 (before 5.2.10.0),2022-09-28
+ASUS,Unknown,nas-m25_firmware,CVE-2022-4221,"Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Asus NAS-M25 allows an unauthenticated attacker to inject arbitrary OS commands via unsanitized cookie values.This issue affects NAS-M25: through 1.0.1.7.
+
+",Network,https://onekey.com/blog/security-advisory-asus-m25-nas-vulnerability/,2.3 (up to 1.0.1.7),2022-12-01
+ASUS,Unknown,armoury_crate,CVE-2022-42455,"ASUS EC Tool driver (aka d.sys) 1beb15c90dcf7a5234ed077833a0a3e900969b60be1d04fcebce0a9f8994bdbb, as signed by ASUS and shipped with multiple ASUS software products, contains multiple IOCTL handlers that provide raw read and write access to port I/O and MSRs via unprivileged IOCTL calls. Local users can gain privileges.",Local,Not provided,2.3 (before 5.3.4.1),2023-02-15
+ASUS,Unknown,aura_sync,CVE-2022-44898,"The MsIo64.sys component in Asus Aura Sync through v1.07.79 does not properly validate input to IOCTL 0x80102040, 0x80102044, 0x80102050, and 0x80102054, allowing attackers to trigger a memory corruption and cause a Denial of Service (DoS) or escalate privileges via crafted IOCTL requests.",Local,https://www.asus.com/campaign/aura/us/download.php | http://packetstormsecurity.com/files/174447/MsIo64-LOLDriver-Memory-Corruption.html | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3 (up to 1.07.79),2022-12-14
+ASUS,BIOS/Firmware,linux_kernel,CVE-2022-48702,"In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: emu10k1: Fix out of bounds access in snd_emu10k1_pcm_channel_alloc()
+
+The voice allocator sometimes begins allocating from near the end of the
+array and then wraps around, however snd_emu10k1_pcm_channel_alloc()
+accesses the newly allocated voices as if it never wrapped around.
+
+This results in out of bounds access if the first voice has a high enough
+index so that first_voice + requested_voice_count > NUM_G (64).
+The more voices are requested, the more likely it is for this to occur.
+
+This was initially discovered using PipeWire, however it can be reproduced
+by calling aplay multiple times with 16 channels:
+aplay -r 48000 -D plughw:CARD=Live,DEV=3 -c 16 /dev/zero
+
+UBSAN: array-index-out-of-bounds in sound/pci/emu10k1/emupcm.c:127:40
+index 65 is out of range for type 'snd_emu10k1_voice [64]'
+CPU: 1 PID: 31977 Comm: aplay Tainted: G        W IOE      6.0.0-rc2-emu10k1+ #7
+Hardware name: ASUSTEK COMPUTER INC P5W DH Deluxe/P5W DH Deluxe, BIOS 3002    07/22/2010
+Call Trace:
+<TASK>
+dump_stack_lvl+0x49/0x63
+dump_stack+0x10/0x16
+ubsan_epilogue+0x9/0x3f
+__ubsan_handle_out_of_bounds.cold+0x44/0x49
+snd_emu10k1_playback_hw_params+0x3bc/0x420 [snd_emu10k1]
+snd_pcm_hw_params+0x29f/0x600 [snd_pcm]
+snd_pcm_common_ioctl+0x188/0x1410 [snd_pcm]
+? exit_to_user_mode_prepare+0x35/0x170
+? do_syscall_64+0x69/0x90
+? syscall_exit_to_user_mode+0x26/0x50
+? do_syscall_64+0x69/0x90
+? exit_to_user_mode_prepare+0x35/0x170
+snd_pcm_ioctl+0x27/0x40 [snd_pcm]
+__x64_sys_ioctl+0x95/0xd0
+do_syscall_64+0x5c/0x90
+? do_syscall_64+0x69/0x90
+? do_syscall_64+0x69/0x90
+entry_SYSCALL_64_after_hwframe+0x63/0xcd",Local,Not provided,"2.3 (before 4.9.328), 2.3 (before 5.4.213), 2.3 (before 4.19.258), 2.3 (before 4.14.293), 2.3 (before 5.10.143), 2.3 (before 5.15.68), 2.3, 2.3 (before 5.19.9)",2024-05-03
+ASUS,Unknown,linux_kernel,CVE-2022-49009,"In the Linux kernel, the following vulnerability has been resolved:
+
+hwmon: (asus-ec-sensors) Add checks for devm_kcalloc
+
+As the devm_kcalloc may return NULL, the return value needs to be checked
+to avoid NULL poineter dereference.",Local,Not provided,"2.3, 2.3 (before 6.0.12)",2024-10-21
+ASUS,Laptop,ux360ca_bios,CVE-2021-26943,"The UX360CA BIOS through 303 on ASUS laptops allow an attacker (with the ring 0 privilege) to overwrite nearly arbitrary physical memory locations, including SMRAM, and execute arbitrary code in the SMM (issue 3 of 3).",Local,https://www.asus.com/support/FAQ/1045541/,2.3 (before 304),2021-03-31
+ASUS,Router,askey_rtf8115vw_firmware,CVE-2021-27403,Askey RTF8115VW BR_SV_g11.11_RTF_TEF001_V6.54_V014 devices allow cgi-bin/te_acceso_router.cgi curWebPage XSS.,Network,Not provided,2.3,2021-02-19
+ASUS,Unknown,askey_rtf8115vw_firmware,CVE-2021-27404,Askey RTF8115VW BR_SV_g11.11_RTF_TEF001_V6.54_V014 devices allow injection of a Host HTTP header.,Network,Not provided,2.3,2021-02-19
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28175,"The Radius configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28176,"The DNS configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28177,"The LDAP configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28178,"The UEFI configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28179,"The specific function in ASUS BMC’s firmware Web management page (Media support configuration setting) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28180,"The specific function in ASUS BMC’s firmware Web management page (Audit log configuration setting) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28181,"The specific function in ASUS BMC’s firmware Web management page (Remote video configuration setting) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28182,"The Web Service configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28183,"The specific function in ASUS BMC’s firmware Web management page (Web License configuration setting) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28184,"The Active Directory configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28185,"The specific function in ASUS BMC’s firmware Web management page (ActiveX configuration-1 acquisition) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28186,"The specific function in ASUS BMC’s firmware Web management page (ActiveX configuration-2 acquisition) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28187,"The specific function in ASUS BMC’s firmware Web management page (Generate new SSL certificate) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28188,"The specific function in ASUS BMC’s firmware Web management page (Modify user’s information function) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28189,"The SMTP configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28190,"The specific function in ASUS BMC’s firmware Web management page (Generate new certificate function) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28191,"The Firmware update function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28192,"The specific function in ASUS BMC’s firmware Web management page (Remote video storage function) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28193,"The SMTP configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28194,"The specific function in ASUS BMC’s firmware Web management page (Remote image configuration setting) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28195,"The Radius configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28196,"The specific function in ASUS BMC’s firmware Web management page (Generate SSL certificate function) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28197,"The Active Directory configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28198,"The Firmware protocol configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28199,"The specific function in ASUS BMC’s firmware Web management page (Modify user’s information function) does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28200,"The CD media configuration function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28201,"The Service configuration-1 function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28202,"The Service configuration-2 function in ASUS BMC’s firmware Web management page does not verify the string length entered by users, resulting in a Buffer overflow vulnerability. As obtaining the privileged permission, remote attackers use the leakage to abnormally terminate the Web service.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28203,"The Web Set Media Image function in ASUS BMC’s firmware Web management page does not filter the specific parameter. As obtaining the administrator permission, remote attackers can launch command injection to execute command arbitrary.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28204,"The specific function in ASUS BMC’s firmware Web management page (Modify user’s information function) does not filter the specific parameter. As obtaining the administrator permission, remote attackers can launch command injection to execute command arbitrary.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"z10pr-d16_firmware,asmb8-ikvm_firmware,z10pe-d16_ws_firmware",CVE-2021-28205,"The specific function in ASUS BMC’s firmware Web management page (Delete SOL video file function) does not filter the specific parameter. As obtaining the administrator permission, remote attackers can use the means of path traversal to access system files.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28206,"The specific function in ASUS BMC’s firmware Web management page (Record video file function) does not filter the specific parameter. As obtaining the administrator permission, remote attackers can use the means of path traversal to access system files.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28207,"The specific function in ASUS BMC’s firmware Web management page (Get Help file function) does not filter the specific parameter. As obtaining the administrator permission, remote attackers can use the means of path traversal to access system files.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28208,"The specific function in ASUS BMC’s firmware Web management page (Get video file function) does not filter the specific parameter. As obtaining the administrator permission, remote attackers can use the means of path traversal to access system files.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Unknown,"asmb9-ikvm_firmware,rs720a-e9-rs24-e_firmware,rs700a-e9-rs4_firmware,rs700-e9-rs4_firmware,esc4000_g4x_firmware,rs700-e9-rs12_firmware,rs100-e10-pi2_firmware,rs300-e10-ps4_firmware,rs300-e10-rs4_firmware,rs500a-e9-ps4_firmware,rs500a-e9-rs4_firmware,rs500a-e9_rs4_u_firmware,e700_g4_firmware,ws_c422_pro\/se_firmware,ws_x299_pro\/se_firmware,z11pa-u12_firmware,z11pa-u12\/10g-2s_firmware,knpa-u16_firmware,esc4000_dhd_g4_firmware,esc4000_g4_firmware,rs720q-e9-rs24-s_firmware,rs720q-e9-rs8_firmware,rs720q-e9-rs8-s_firmware,z11pa-d8_firmware,z11pa-d8c_firmware,rs720-e9-rs24-u_firmware,rs720-e9-rs8-g_firmware,rs500-e9-ps4_firmware,pro_e800_g4_firmware,rs500-e9-rs4_firmware,rs500-e9-rs4-u_firmware,rs520-e9-rs12-e_firmware,rs520-e9-rs8_firmware,esc8000_g4_firmware,esc8000_g4\/10g_firmware,rs720-e9-rs12-e_firmware,ws_c621e_sage_firmware,rs500a-e10-ps4_firmware,rs500a-e10-rs4_firmware,rs700a-e9-rs12v2_firmware,rs700a-e9-rs4v2_firmware,rs720a-e9-rs12v2_firmware,rs720a-e9-rs24v2_firmware,z11pr-d16_firmware",CVE-2021-28209,"The specific function in ASUS BMC’s firmware Web management page (Delete video file function) does not filter the specific parameter. As obtaining the administrator permission, remote attackers can use the means of path traversal to access system files.",Network,https://www.asus.com/tw/support/callus/ | https://www.asus.com/content/ASUS-Product-Security-Advisory/,2.3,2021-04-06
+ASUS,Graphics Card,gputweak_ii,CVE-2021-28685,AsIO2_64.sys and AsIO2_32.sys in ASUS GPUTweak II before 2.3.0.3 allow low-privileged users to interact directly with physical memory (by calling one of several driver routines that map physical memory into the virtual address space of the calling process) and to interact with MSR registers. This could enable low-privileged users to achieve NT AUTHORITY\SYSTEM privileges via a DeviceIoControl.,Local,https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3 (before 2.3.0.3),2021-04-08
+ASUS,Graphics Card,gputweak_ii,CVE-2021-28686,AsIO2_64.sys and AsIO2_32.sys in ASUS GPUTweak II before 2.3.0.3 allow low-privileged users to trigger a stack-based buffer overflow. This could enable low-privileged users to achieve Denial of Service via a DeviceIoControl.,Local,https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3 (before 2.3.0.3),2021-04-08
+ASUS,Router,"zenwifi_ax_\(xt8\)_firmware,rt-ax3000_firmware,rt-ax55_firmware,rt-ax56u_firmware,rt-ax58u_firmware,rt-ax68u_firmware,rt-ax82u_firmware,rt-ax86u_firmware,rt-ax88u_firmware,rt-ac66u_b1_firmware,rt-ac1750_b1_firmware,rt-ac1900_firmware,rt-ac1900p_firmware,rt-ac1900u_firmware,rt-ac2900_firmware,rt-ac3100_firmware,rt-ac5300_firmware,rt-ac58u_firmware,rt-ac65u_firmware,rt-ac68p_firmware,rt-ac68r_firmware,rt-ac68rw_firmware,rt-ac68u_firmware,rt-ac68w_firmware,rt-ac85u_firmware,rt-ac86u_firmware,rt-ac88u_firmware",CVE-2021-3128,"In ASUS RT-AX3000, ZenWiFi AX (XT8), RT-AX88U, and other ASUS routers with firmware < 3.0.0.4.386.42095 or < 9.0.0.4.386.41994, when IPv6 is used, a routing loop can occur that generates excessive network traffic between an affected device and its upstream ISP's router. This occurs when a link prefix route points to a point-to-point link, a destination IPv6 address belongs to the prefix and is not a local IPv6 address, and a router advertisement is received with at least one global unique IPv6 prefix for which the on-link flag is set.",Network,https://www.asus.com/supportonly/RT-AC68R/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC68W/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX88U/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC2900/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX3000/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC86U/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC5300/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX68U/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX56U/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC68RW/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC88U/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX55/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC1900P/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX58U/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC85U/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/Whole-Home-Mesh-WiFi-System/ZenWiFi-WiFi-Systems/ASUS-ZenWiFi-AX-XT8-/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC3100/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC1900U/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AC66U-B1/HelpDesk_Download/ | https://www.asus.com/supportonly/RT-AC68U/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC68P/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC65U/HelpDesk_download/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX82U/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-6/All-series/RT-AX86U/HelpDesk_BIOS/ | https://www.asus.com/supportonly/RT-AC1900/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC1750_B1/HelpDesk_download/ | https://www.asus.com/supportonly/RT-AC58U/HelpDesk_download/,"2.3 (before 3.0.0.4.386.42095), 2.3 (before 9.0.0.4.386.41994)",2021-04-12
+ASUS,Unknown,dsl-n14u_b1_firmware,CVE-2021-3166,"An issue was discovered on ASUS DSL-N14U-B1 1.1.2.3_805 devices. An attacker can upload arbitrary file content as a firmware update when the filename Settings_DSL-N14U-B1.trx is used. Once this file is loaded, shutdown measures on a wide range of services are triggered as if it were a real update, resulting in a persistent outage of those services.",Network,Not provided,2.3,2021-01-18
+ASUS,Router,gt-ac2900_firmware,CVE-2021-32030,"The administrator application on ASUS GT-AC2900 devices before 3.0.0.4.386.42643 and Lyra Mini before 3.0.0.4_384_46630 allows authentication bypass when processing remote input from an unauthenticated user, leading to unauthorized access to the administrator interface. This relates to handle_request in router/httpd/httpd.c and auth_check in web_hook.o. An attacker-supplied value of '\0' matches the device's default value of '\0' in some situations. Note: All versions of Lyra Mini and earlier which are unsupported (End-of-Life, EOL) are also affected by this vulnerability, Consumers can mitigate this vulnerability by disabling the remote access features from WAN.",Network,https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-Gaming-Routers/RT-AC2900/HelpDesk_BIOS/ | https://www.asus.com/us/supportonly/lyra%20mini/helpdesk_bios/,2.3 (before 3.0.0.4.386.42643),2021-05-06
+ASUS,Unknown,rt-ax3000_firmware,CVE-2021-3229,Denial of service in ASUSWRT ASUS RT-AX3000 firmware versions 3.0.0.4.384_10177 and earlier versions allows an attacker to disrupt the use of device setup services via continuous login error.,Network,https://dlcdnimgs.asus.com/websites/global/productcustomizedTab/562/ASUSWRT%20portal%20feature.pdf | https://www.asus.com/us/ASUSWRT/,2.3 (up to 3.0.0.4.384_10177),2021-02-05
+ASUS,Unknown,dsl-n14u-b1_firmware,CVE-2021-3254,Asus DSL-N14U-B1 1.1.2.3_805 allows remote attackers to cause a Denial of Service (DoS) via a TCP SYN scan using nmap.,Network,Not provided,2.3,2022-05-11
+ASUS,Router,"bcm4352_firmware,bcm43684_firmware",CVE-2021-34174,"A vulnerability exists in Broadcom BCM4352 and BCM43684 chips. Any wireless router using BCM4352 and BCM43684 will be affected, such as ASUS AX6100. An attacker may cause a Denial of Service (DoS) to any device connected to BCM4352 or BCM43684 routers via an association or reassociation frame.",Local,Not provided,2.3,2021-07-14
+ASUS,Router,rt-ac68u_firmware,CVE-2021-37315,Incorrect Access Control issue discoverd in Cloud Disk in ASUS RT-AC68U router firmware version before 3.0.0.4.386.41634 allows remote attackers to write arbitrary files via improper sanitation on the source for COPY and MOVE operations.,Network,Not provided,2.3 (before 3.0.0.4.386.41634),2023-02-03
+ASUS,Router,rt-ac68u_firmware,CVE-2021-37316,SQL injection vulnerability in Cloud Disk in ASUS RT-AC68U router firmware version before 3.0.0.4.386.41634 allows remote attackers to view sensitive information via /etc/shadow.,Network,Not provided,2.3 (before 3.0.0.4.386.41634),2023-02-03
+ASUS,Router,rt-ac68u_firmware,CVE-2021-37317,Directory Traversal vulnerability in Cloud Disk in ASUS RT-AC68U router firmware version before 3.0.0.4.386.41634 allows remote attackers to write arbitrary files via improper sanitation on the target for COPY and MOVE operations.,Network,Not provided,2.3 (before 3.0.0.4.386.41634),2023-02-03
+ASUS,Router,"gt-axe11000_firmware,rt-ax3000_firmware,rt-ax55_firmware,rt-ax58u_firmware,tuf-ax3000_firmware",CVE-2021-37910,"ASUS routers Wi-Fi protected access protocol (WPA2 and WPA3-SAE) has improper control of Interaction frequency vulnerability, an unauthenticated attacker can remotely disconnect other users' connections by sending specially crafted SAE authentication frames.",Network,Not provided,2.3 (before 3.0.0.4.386.45898),2021-11-12
+ASUS,Router,rt-ax56u_firmware,CVE-2021-40556,"A stack overflow vulnerability exists in the httpd service in ASUS RT-AX56U Router Version 3.0.0.4.386.44266. This vulnerability is caused by the strcat function called by ""caupload"" input handle function allowing the user to enter 0xFFFF bytes into the stack. This vulnerability allows an attacker to execute commands remotely. The vulnerability requires authentication.",Network,https://www.asus.com/tw/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX56U/HelpDesk_BIOS/,2.3,2022-10-06
+ASUS,Unknown,armoury_crate_lite_service,CVE-2021-40981,ASUS ROG Armoury Crate Lite before 4.2.10 allows local users to gain privileges by placing a Trojan horse file in the publicly writable %PROGRAMDATA%\ASUS\GamingCenterLib directory.,Local,Not provided,2.3 (before 4.2.10),2021-09-27
+ASUS,BIOS/Firmware,p453uj_bios,CVE-2021-41289,"ASUS P453UJ contains the Improper Restriction of Operations within the Bounds of a Memory Buffer vulnerability. With a general user’s permission, local attackers can modify the BIOS by replacing or filling in the content of the designated Memory DataBuffer, which causing a failure of integrity verification and further resulting in a failure to boot.",Local,https://www.asus.com/tw/supportonly/P453UJ/HelpDesk_BIOS/,2.3,2021-11-15
+ASUS,Unknown,"gt-ax11000_firmware,rt-ax3000_firmware,rt-ax55_firmware,rt-ax56u_firmware,rt-ax56u_v2_firmware,rt-ax58u_firmware,rt-ax82u_firmware,rt-ax82u_gundam_edition_firmware,rt-ax86u_firmware,rt-ax86s_firmware,rt-ax86u_zaku_ii_edition_firmware,rt-ax88u_firmware,rt-ax92u_firmware,tuf_gaming_ax3000_firmware,tuf-ax5400_firmware,zenwifi_xd6_firmware,zenwifi_ax_\(xt8\)_firmware,rt-ax68u_firmware",CVE-2021-41435,"A brute-force protection bypass in CAPTCHA protection in ASUS ROG Rapture GT-AX11000, RT-AX3000, RT-AX55, RT-AX56U, RT-AX56U_V2, RT-AX58U, RT-AX82U, RT-AX82U GUNDAM EDITION, RT-AX86 Series(RT-AX86U/RT-AX86S), RT-AX86U ZAKU II EDITION, RT-AX88U, RT-AX92U, TUF Gaming AX3000, TUF Gaming AX5400 (TUF-AX5400), ASUS ZenWiFi XD6, ASUS ZenWiFi AX (XT8) before 3.0.0.4.386.45898, and RT-AX68U before 3.0.0.4.386.45911, allows a remote attacker to attempt any number of login attempts via sending a specific HTTP request.",Network,http://asus.com | https://rog.asus.com/networking/rog-rapture-gt-ax11000-model/helpdesk_bios | https://www.asus.com/Networking-IoT-Servers/Whole-Home-Mesh-WiFi-System/ZenWiFi-WiFi-Systems/ASUS-ZenWiFi-XD6/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/Whole-Home-Mesh-WiFi-System/ZenWiFi-WiFi-Systems/ASUS-ZenWiFi-AX-XT8-/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX3000/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/All-series/RT-AX55/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX56U/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX68U/HelpDesk_BIOS/,"2.3 (before 3.0.0.4.386.45911), 2.3 (before 3.0.0.4.386.45898)",2021-11-19
+ASUS,Unknown,"gt-ax11000_firmware,rt-ax3000_firmware,rt-ax55_firmware,rt-ax56u_firmware,rt-ax56u_v2_firmware,rt-ax58u_firmware,rt-ax82u_firmware,rt-ax82u_gundam_edition_firmware,rt-ax86u_firmware,rt-ax86s_firmware,rt-ax86u_zaku_ii_edition_firmware,rt-ax88u_firmware,rt-ax92u_firmware,tuf_gaming_ax3000_firmware,tuf-ax5400_firmware,zenwifi_xd6_firmware,zenwifi_ax_\(xt8\)_firmware,rt-ax68u_firmware",CVE-2021-41436,"An HTTP request smuggling in web application in ASUS ROG Rapture GT-AX11000, RT-AX3000, RT-AX55, RT-AX56U, RT-AX56U_V2, RT-AX58U, RT-AX82U, RT-AX82U GUNDAM EDITION, RT-AX86 Series(RT-AX86U/RT-AX86S), RT-AX86U ZAKU II EDITION, RT-AX88U, RT-AX92U, TUF Gaming AX3000, TUF Gaming AX5400 (TUF-AX5400), ASUS ZenWiFi XD6, ASUS ZenWiFi AX (XT8) before 3.0.0.4.386.45898, and RT-AX68U before 3.0.0.4.386.45911, allows a remote unauthenticated attacker to DoS via sending a specially crafted HTTP packet.",Network,http://asus.com | https://rog.asus.com/networking/rog-rapture-gt-ax11000-model/helpdesk_bios | https://www.asus.com/Networking-IoT-Servers/Whole-Home-Mesh-WiFi-System/ZenWiFi-WiFi-Systems/ASUS-ZenWiFi-XD6/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/Whole-Home-Mesh-WiFi-System/ZenWiFi-WiFi-Systems/ASUS-ZenWiFi-AX-XT8-/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX3000/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/All-series/RT-AX55/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX56U/HelpDesk_BIOS/ | https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AX68U/HelpDesk_BIOS/,"2.3 (before 3.0.0.4.386.45911), 2.3 (before 3.0.0.4.386.45898)",2021-11-19
+ASUS,Unknown,rt-ax88u_firmware,CVE-2021-41437,"An HTTP response splitting attack in web application in ASUS RT-AX88U before v3.0.0.4.388.20558 allows an attacker to craft a specific URL that if an authenticated victim visits it, the URL will give access to the cloud storage of the attacker.",Network,https://www.asus.com/Networking-IoT-Servers/WiFi-Routers/ASUS-Gaming-Routers/RT-AX88U/HelpDesk_BIOS/,2.3 (before 3.0.0.4.388.20558),2022-09-26
+ASUS,Laptop,ux582lr_firmware,CVE-2021-42055,ASUSTek ZenBook Pro Due 15 UX582 laptop firmware through 203 has Insecure Permissions that allow attacks by a physically proximate attacker.,Local,https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3 (before 303),2021-10-18
+ASUS,Router,"zenwifi_xd4s_firmware,zenwifi_xt9_firmware,zenwifi_xd5_firmware,zenwifi_pro_et12_firmware,zenwifi__pro_xt12_firmware,zenwifi_ax_hybrid_firmware,zenwifi_et8_firmware,zenwifi_xd6_firmware,zenwifi_ac_mini_firmware,zenwifi_ax_mini_firmware,zenwifi_ax_firmware,zenwifi_ac_firmware,rt-ac66u_b1_firmware,rt-ax88u_firmware,rt-ax82u_firmware,rt-ax89x_firmware,rt-ax92u_firmware,rt-ax86u_firmware,rt-ax68u_firmware,rt-ax3000_firmware,rt-ax58u_firmware,rt-ax55_firmware,rt-ax56u_firmware,rt-ac66u\+_firmware,rog_rapture_gt-ac5300_firmware,rog_rapture_gt-ax11000_firmware,rog_rapture_gt-ac2900_firmware,rt-ac1300uhp_firmware,rt-ac1300g\+_firmware,tuf_gaming_ax5400_firmware,tuf_gaming_ax3000_v2_firmware,rt-ac1200_firmware,rt-ac5300_firmware,rt-ac1200g_firmware,rt-ac1200hp_firmware,rt-ac1200g\+_firmware,rt-ac1200e_firmware,rt-ac1200gu_firmware,rt-ac3100_firmware,rt-ac58u_firmware,rt-ac88u_firmware,rt-ac56u_firmware,rt-ac56r_firmware,rt-ac56s_firmware,rt-ac3200_firmware,rt-ac55u_firmware,rt-ac2900_firmware,rt-ac55uhp_firmware,rt-ac2600_firmware,rt-ac53_firmware,rt-ac2400_firmware,rt-ac52u_b1_firmware,rt-ac2200_firmware,rt-ac51u_firmware,rt-ac51u\+_firmware,rt-ac87u_firmware,rt-ac87r_firmware,rt-acrh17_firmware,rt-ac86u_firmware,rt-acrh13_firmware,rt-ac85u_firmware,rt-n66u_firmware,rt-n66r_firmware,rt-n66w_firmware,rt-n66c1_firmware,rt-ac85p_firmware,rt-n18u_firmware,rt-ac65p_firmware,rt-n19_firmware,rt-ac57u_firmware,rt-n14uhp_firmware,rt-ac68u_firmware,rt-ac68r_firmware,rt-ac68p_firmware,rt-ac68w_firmware,rt-ac68uf_firmware,rt-n12e_b1_firmware,rt-n12e_c1_firmware,rt-ac65u_firmware,rt-n12hp_b1_firmware,rt-ac1900_firmware,rt-n12vp_b1_firmware,rt-ac1900p_firmware,rt-ac1900u_firmware,rt-n12\+_b1_firmware,rt-ac1750_firmware,rt-n12d1_firmware,rt-ac1750_b1__firmware,4g-ac53u_firmware,rt-ac66u_firmware,rt-ac66r_firmware,rt-ac66w_firmware,4g-ac68u_firmware",CVE-2021-43702,"ASUS RT-A88U 3.0.0.4.386_45898 is vulnerable to Cross Site Scripting (XSS). The ASUS router admin panel does not sanitize the WiFI logs correctly, if an attacker was able to change the SSID of the router with a custom payload, they could achieve stored XSS on the device.",Network,https://www.asus.com/uk/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AC88U/ | https://www.kroll.com/en/insights/publications/cyber/cve-2021-43702-from-discovery-to-patch,2.3,2022-07-05
+ASUS,Router,rt-ax56u_firmware,CVE-2021-44158,ASUS RT-AX56U Wi-Fi Router is vulnerable to stack-based buffer overflow due to improper validation for httpd parameter length. An authenticated local area network attacker can launch arbitrary code execution to control the system or disrupt service.,Adjacent Network,Not provided,2.3,2022-01-03
+ASUS,Unknown,"rt-ac68u_firmware,rt-ac5300_firmware",CVE-2021-45756,Asus RT-AC68U <3.0.0.4.385.20633 and RT-AC5300 <3.0.0.4.384.82072 are affected by a buffer overflow in blocking_request.cgi.,Network,http://asus.com,"2.3 (before 3.0.0.4.384.82072), 2.3 (before 3.0.0.4.385.20633)",2022-03-23
+ASUS,Unknown,rt-ac68u_firmware,CVE-2021-45757,"ASUS AC68U <=3.0.0.4.385.20852 is affected by a buffer overflow in blocking.cgi, which may cause a denial of service (DoS).",Network,http://asus.com,2.3 (up to 3.0.0.4.385.20852),2022-03-23
+ASUS,Unknown,rt-ac52u_b1_firmware,CVE-2021-46109,Invalid input sanitizing leads to reflected Cross Site Scripting (XSS) in ASUS RT-AC52U_B1 3.0.0.4.380.10931 can lead to a user session hijack.,Network,Not provided,2.3,2022-01-03
+ASUS,Unknown,cmax6000_firmware,CVE-2021-46247,The use of a hard-coded cryptographic key significantly increases the possibility encrypted data may be recovered from ASUS CMAX6000 v1.02.00.,Network,Not provided,2.3,2022-02-17
+ASUS,BIOS/Firmware,Unknown,CVE-2021-47262,"In the Linux kernel, the following vulnerability has been resolved:
+
+KVM: x86: Ensure liveliness of nested VM-Enter fail tracepoint message
+
+Use the __string() machinery provided by the tracing subystem to make a
+copy of the string literals consumed by the ""nested VM-Enter failed""
+tracepoint.  A complete copy is necessary to ensure that the tracepoint
+can't outlive the data/memory it consumes and deference stale memory.
+
+Because the tracepoint itself is defined by kvm, if kvm-intel and/or
+kvm-amd are built as modules, the memory holding the string literals
+defined by the vendor modules will be freed when the module is unloaded,
+whereas the tracepoint and its data in the ring buffer will live until
+kvm is unloaded (or ""indefinitely"" if kvm is built-in).
+
+This bug has existed since the tracepoint was added, but was recently
+exposed by a new check in tracing to detect exactly this type of bug.
+
+  fmt: '%s%s
+  ' current_buffer: ' vmx_dirty_log_t-140127  [003] ....  kvm_nested_vmenter_failed: '
+  WARNING: CPU: 3 PID: 140134 at kernel/trace/trace.c:3759 trace_check_vprintf+0x3be/0x3e0
+  CPU: 3 PID: 140134 Comm: less Not tainted 5.13.0-rc1-ce2e73ce600a-req #184
+  Hardware name: ASUS Q87M-E/Q87M-E, BIOS 1102 03/03/2014
+  RIP: 0010:trace_check_vprintf+0x3be/0x3e0
+  Code: <0f> 0b 44 8b 4c 24 1c e9 a9 fe ff ff c6 44 02 ff 00 49 8b 97 b0 20
+  RSP: 0018:ffffa895cc37bcb0 EFLAGS: 00010282
+  RAX: 0000000000000000 RBX: ffffa895cc37bd08 RCX: 0000000000000027
+  RDX: 0000000000000027 RSI: 00000000ffffdfff RDI: ffff9766cfad74f8
+  RBP: ffffffffc0a041d4 R08: ffff9766cfad74f0 R09: ffffa895cc37bad8
+  R10: 0000000000000001 R11: 0000000000000001 R12: ffffffffc0a041d4
+  R13: ffffffffc0f4dba8 R14: 0000000000000000 R15: ffff976409f2c000
+  FS:  00007f92fa200740(0000) GS:ffff9766cfac0000(0000) knlGS:0000000000000000
+  CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+  CR2: 0000559bd11b0000 CR3: 000000019fbaa002 CR4: 00000000001726e0
+  Call Trace:
+   trace_event_printf+0x5e/0x80
+   trace_raw_output_kvm_nested_vmenter_failed+0x3a/0x60 [kvm]
+   print_trace_line+0x1dd/0x4e0
+   s_show+0x45/0x150
+   seq_read_iter+0x2d5/0x4c0
+   seq_read+0x106/0x150
+   vfs_read+0x98/0x180
+   ksys_read+0x5f/0xe0
+   do_syscall_64+0x40/0xb0
+   entry_SYSCALL_64_after_hwframe+0x44/0xae",,Not provided,unknown versions,2024-05-21
+ASUS,Unknown,android,CVE-2020-0210,"In removeSharedAccountAsUser of AccountManager.java, there is a possible permissions bypass to a confused deputy. This could lead to local escalation of privilege with User execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-145206763",Local,https://source.android.com/security/bulletin/pixel/2020-06-01,2.3,2020-06-11
+ASUS,Laptop,device_activation,CVE-2020-10649,DevActSvc.exe in ASUS Device Activation before 1.0.7.0 for Windows 10 notebooks and PCs could lead to unsigned code execution with no additional restrictions when a user puts an application at a particular path with a particular file name.,Local,https://www.asus.com/support/FAQ/1042640/ | https://www.asus.com/Laptops/ASUS-TUF-Gaming-FX504/HelpDesk_Download/ | https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3 (before 1.0.7.0),2020-03-25
+ASUS,Unknown,"unifi_controller,hostapd,rt-n11,adsl,selphy_cp1200,wap150,wap351,wap131,dvg-n5412sp,b1165nfw,ew-m970a3t,ep-101,xp-8500,xp-702,xp-340,xp-620,xp-320,xp-960,xp-2101,xp-330,xp-2105,xp-100,xp-630,xp-8600,xp-4105,xp-241,xp-4100,xp-970,xp-440,m571t,envy_5000_m2u85a,envy_5000_m2u85b,envy_5000_m2u91a,envy_5000_m2u94b,envy_5000_z4a54a,envy_5000_z4a74a,envy_photo_6200_k7g18a,envy_photo_6200_k7g26b,envy_photo_6200_k7s21b,envy_photo_6200_y0k13d_,envy_photo_6200_y0k15a,envy_photo_7100_3xd89a,envy_photo_7100_k7g93a,envy_photo_7100_k7g99a,envy_photo_7100_z3m37a,envy_photo_7100_z3m52a,envy_photo_7800_k7r96a,envy_photo_7800_k7s00a,envy_photo_7800_k7s10d,envy_photo_7800_y0g42d,envy_photo_7800_y0g52b,envy_5020_m2u91b,envy_114_cq811a,envy_114_cq811b,envy_114_cq812a,envy_111_cq810a,envy_110_cq809c,envy_110_cq809a,envy_110_cq809b,envy_110_cq809d,envy_110_cq812c,envy_100_cn517a,envy_100_cn517b,envy_100_cn517c,envy_100_cn518a,envy_100_cn519a,envy_100_cn519b,envy_pro_6420_5se45b,envy_pro_6420_5se46a,envy_pro_6420_6wd14a,envy_pro_6420_6wd16a,envy_pro_6452_5se47a,envy_pro_6455_5se45a,5020_z4a69a,5030_m2u92b,5030_z4a70a,5034_z4a74a,5660_f8b04a,envy_5665_f8b06a,envy_5664_f8b08a,envy_7640,envy_7644_e4w46a,envy_7645_e4w44a,envy_5640_b9s56a,envy_5640_b9s58a,envy_6540_b9s59a,envy_5642_b9s64a,envy_5643_b9s63a,envy_5644_b9s65a,envy_5646_f8b05a,envy_5540_f2e72a,envy_5540_g0v47a,envy_5540_g0v52a,envy_5540_g0v51a,envy_5540_g0v53a,envy_5540_k7c85a,envy_5541_k7g89a,envy_5542_k7c88a,envy_5543_n9u88a,envy_5544_k7c89a,envy_5544_k7c93a,envy_5545_g0v50a,envy_5546_k7c90a,envy_5547_j6u64a,envy_5548_k7g87a,deskjet_ink_advantage_5575_g0v48b,deskjet_ink_advantage_5575_g0v48c,deskjet_ink_advantage_4535_f0v64a,deskjet_ink_advantage_4535_f0v64b,deskjet_ink_advantage_4535_f0v64c,deskjet_ink_advantage_4536_f0v65a,deskjet_ink_advantage_4538_f0v66b,deskjet_ink_advantage_4675_f1h97a,deskjet_ink_advantage_4675_f1h97b,deskjet_ink_advantage_4675_f1h97c,deskjet_ink_advantage_4676_f1h98a,deskjet_ink_advantage_4678_f1h99b,envy_4511_k9h50a,envy_4512_k9h49a,envy_4513_k9h51a,envy_4516_k9h52a,envy_4520_e6g67a,envy_4520_e6g67b,envy_4520_f0v63a,envy_4520_f0v63b,envy_4520_f0v69a,envy_4521_k9t10b,envy_4522_f0v67a,envy_4523_j6u60b,envy_4524_f0v71b,envy_4524_f0v72b,envy_4524_k9t01a,envy_4525_k9t09b,envy_4526_k9t05b,envy_4527_j6u61b,envy_4528_k9t08b,officejet_4650_e6g87a,officejet_4650_f1h96a,officejet_4650_f1h96b,officejet_4652_f1j02a,officejet_4652_k9v84b,officejet_4652_f1j05b,officejet_4654_f1j07b,officejet_4654_f1j06b,officejet_4655_f1j00a,officejet_4655_k9v79a,officejet_4655_k9v82b,officejet_4656_k9v81b,officejet_4657_v6d29b,officejet_4658_v6d30b,envy_5530,envy_5536,envy_5531,envy_5539,envy_5532,deskjet_ink_advantage_4515,envy_5534,deskjet_ink_advantage_4518,envy_5535,deskjet_ink_advantage_3545_a9t81a,deskjet_ink_advantage_3545_a9t81c,deskjet_ink_advantage_3545_a9t83b,deskjet_ink_advantage_3546_a9t82a,deskjet_ink_advantage_3456_a9t84c,deskjet_ink_advantage_3548_a9t81b,envy_4509_d3p94a,envy_4509_d3p94b,envy_4501_c8d05a,envy_4502_a9t85a,envy_4502_a9t87b,envy_4503_e6g71b,envy_4504_a9t88b,envy_4504_c8d04a,envy_4505_a9t86a,envy_4507_e6g70b,envy_4508_e6g72b,envy_4500_a9t80a,envy_4500_a9t80b,envy_4500_a9t89a,envy_4500_d3p93a,envy_120_cz022a,envy_120_cz022b,envy_120_cz022c,envy_photo_6220_k7g20d,envy_photo_6220_k7g21b,envy_photo_6230_k7g25b,envy_photo_6232_k7g26b,envy_photo_6234_k7s21b,envy_photo_6252_k7g22a,envy_photo_6222_y0k13d,envy_photo_6222_y0k14d,envy_photo_7830_y0g50b,envy_photo_7822_y0g42d,envy_photo_7822_y0g43d,envy_photo_7120_z3m41d,envy_photo_7155_z3m52a,envy_photo_7164_k7g99a,envy_6020_5se16b,envy_6020_5se17a,envy_6020_6wd35a,envy_6020_7cz37a,envy_6052_5se18a,envy_6055_5se16a,hg532e,hg255s,wr8165n,wnhde111,zonedirector_1200,archer_c50,zxv10_w300,vmg8324-b10a,amg1202-t10b,windows_10,xbox_one,fedora,debian_linux,ubuntu_linux",CVE-2020-12695,"The Open Connectivity Foundation UPnP specification before 2020-04-17 does not forbid the acceptance of a subscription request with a delivery URL on a different network segment than the fully qualified event-subscription URL, aka the CallStranger issue.",Network,https://lists.debian.org/debian-lts-announce/2020/08/msg00013.html | https://lists.debian.org/debian-lts-announce/2020/08/msg00011.html | https://lists.debian.org/debian-lts-announce/2020/12/msg00017.html | http://www.openwall.com/lists/oss-security/2020/06/08/2 | http://packetstormsecurity.com/files/158051/CallStranger-UPnP-Vulnerability-Checker.html,"2.3 (before 2.0.0), 2.3",2020-06-08
+ASUS,Unknown,screenpad2_upgrade_tool,CVE-2020-15009,"AsusScreenXpertServicec.exe and ScreenXpertUpgradeServiceManager.exe in ScreenPad2_Upgrade_Tool.msi V1.0.3 for ASUS PCs with ScreenPad 1.0 (UX450FDX, UX550GDX and UX550GEX) could lead to unsigned code execution with no additional restrictions when a user puts an application at a particular path with a particular file name.",Local,https://www.asus.com/support/FAQ/1043674 | https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3,2020-07-20
+ASUS,Router,rt-ac1900p_firmware,CVE-2020-15498,An issue was discovered on ASUS RT-AC1900P routers before 3.0.0.4.385_20253. The router accepts an arbitrary server certificate for a firmware update. The culprit is the --no-check-certificate option passed to wget tool used to download firmware update files.,Network,https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=27440,2.3 (before 3.0.0.4.385.20253),2020-08-26
+ASUS,Router,rt-ac1900p_firmware,CVE-2020-15499,An issue was discovered on ASUS RT-AC1900P routers before 3.0.0.4.385_20253. They allow XSS via spoofed Release Notes on the Firmware Upgrade page.,Network,https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=27440,2.3 (before 3.0.0.4.385.20253),2020-08-26
+ASUS,Unknown,rt-n12e_firmware,CVE-2020-23648,"Asus RT-N12E 2.0.0.39 is affected by an incorrect access control vulnerability. Through system.asp / start_apply.htm, an attacker can change the administrator password without any authentication.",Network,https://www.asus.com/Networking/RTN12E/HelpDesk_BIOS/,2.3,2022-10-19
+ASUS,Unknown,rt-ac88u_firmware,CVE-2020-29655,"An injection vulnerability exists in RT-AC88U Download Master before 3.1.0.108. Accessing Main_Login.asp?flag=1&productname=FOOBAR&url=/downloadmaster/task.asp will redirect to the login site, which will show the value of the parameter productname within the title. An attacker might be able to influence the appearance of the login page, aka text injection.",Network,Not provided,2.3 (before 3.1.0.108),2020-12-09
+ASUS,Unknown,rt-ac88u_firmware,CVE-2020-29656,"An information disclosure vulnerability exists in RT-AC88U Download Master before 3.1.0.108. A direct access to /downloadmaster/dm_apply.cgi?action_mode=initial&download_type=General&special_cgi=get_language makes it possible to reach ""unknown functionality"" in a ""known to be easy"" manner via an unspecified ""public exploit.""",Network,Not provided,2.3 (before 3.1.0.108),2020-12-09
+ASUS,Unknown,dsl-n17u_firmware,CVE-2020-35219,The ASUS DSL-N17U modem with firmware 1.1.0.2 allows attackers to access the admin interface by changing the admin password without authentication via a POST request to Advanced_System_Content.asp with the uiViewTools_username=admin&uiViewTools_Password= and uiViewTools_PasswordConfirm= substrings.,Network,https://securityforeveryone.com/blog/asus-dsl-n17u-model-cve-2020-35219 | https://www.asus.com/Networking-IoT-Servers/Modem-LTE-Routers/All-series/DSL-N16/HelpDesk_BIOS/,2.3,2021-01-04
+ASUS,Router,rt-ax86u_firmware,CVE-2020-36109,ASUS RT-AX86U router firmware below version under 9.0.0.4_386 has a buffer overflow in the blocking_request.cgi function of the httpd module that can cause code execution when an attacker constructs malicious data.,Network,https://www.asus.com/Static_WebPage/ASUS-Product-Security-Advisory/,2.3 (before 9.0.0.4_386),2021-02-01
+ASUS,Unknown,rt-ac66u_firmware,CVE-2020-7997,ASUS WRT-AC66U 3 RT 3.0.0.4.372_67 devices allow XSS via the Client Name field to the Parental Control feature.,Network,Not provided,2.3,2020-01-28
+ASUS,Unknown,linux_kernel,CVE-2023-1079,"A flaw was found in the Linux kernel. A use-after-free may be triggered in asus_kbd_backlight_set when plugging/disconnecting in a malicious USB device, which advertises itself as an Asus device. Similarly to the previous known CVE-2023-25012, but in asus devices, the work_struct may be scheduled by the LED controller while the device is disconnecting, triggering a use-after-free on the struct asus_kbd_leds *led structure. A malicious USB device may exploit the issue to cause memory corruption with controlled data.",Physical,https://lists.debian.org/debian-lts-announce/2023/05/msg00006.html | https://lists.debian.org/debian-lts-announce/2023/05/msg00005.html,2.3 (before 6.3),2023-03-27
+ASUS,Unknown,"adm,soundsgood,looksgood",CVE-2023-2509,"A Cross-Site Scripting(XSS) vulnerability was found on ADM, LooksGood and SoundsGood Apps. An attacker can exploit this vulnerability to inject malicious scripts into the target applications to access any cookies or sensitive information retained by the browser and used with that application. Affected products and versions include: ADM 4.0.6.REG2, 4.1.0 and below as well as ADM 4.2.1.RGE2 and below, LooksGood 2.0.0.R129 and below and SoundsGood 2.3.0.r1027 and below.",Network,https://www.asustor.com/security/security_advisory_detail?id=22,2.3,2023-05-17
+ASUS,Unknown,datahub,CVE-2023-25561,"DataHub is an open-source metadata platform. In the event a system is using Java Authentication and Authorization Service (JAAS) authentication and that system is given a configuration which contains an error, the authentication for the system will fail open and allow an attacker to login using any username and password. The reason for this is that while an error is thrown in the `authenticateJaasUser` method it is swallowed without propagating the error. As a result of this issue unauthenticated users may gain access to the system. Users are advised to upgrade. There are no known workarounds for this issue. This vulnerability was discovered and reported by the GitHub Security lab and is tracked as GHSL-2022-081.",Network,https://github.com/datahub-project/datahub/security/advisories/GHSA-7wc6-p6c4-522c | https://github.com/datahub-project/datahub/blob/fdf4e48495f083314f59c414bcc7c2601633a2b8/datahub-frontend/app/security/AuthenticationManager.java#L26,2.3 (before 0.8.45),2023-02-11
+ASUS,Unknown,asmb8-ikvm_firmware,CVE-2023-26602,"ASUS ASMB8 iKVM firmware through 1.14.51 allows remote attackers to execute arbitrary code by using SNMP to create extensions, as demonstrated by snmpset for NET-SNMP-EXTEND-MIB with /bin/sh for command execution.",Network,http://packetstormsecurity.com/files/171137/ASUS-ASMB8-iKVM-1.14.51-SNMP-Remote-Root.html,2.3 (up to 1.14.51),2023-02-26
+ASUS,Unknown,"armoury_crate,setupasusservices",CVE-2023-26911,ASUS SetupAsusServices v1.0.5.1 in Asus Armoury Crate v5.3.4.0 contains an unquoted service path vulnerability which allows local users to launch processes with elevated privileges.,Local,http://asus.com,"2.3 (up to 1.0.5.1), 2.3 (up to 5.3.4.0)",2023-07-26
+ASUS,Unknown,download_center,CVE-2023-2749,"Download Center fails to properly validate the file path submitted by a user, An attacker can exploit this vulnerability to gain unauthorized access to sensitive files or directories without appropriate permission restrictions. Download Center on ADM 4.0 and above will be affected. Affected products and versions include: Download Center 1.1.5.r1280 and below. ",Network,https://www.asustor.com/security/security_advisory_detail?id=24,2.3 (before 1.1.5.r1298),2023-05-31
+ASUS,Unknown,"curl,fedora,macos,clustered_data_ontap,ontap_antivirus_connector,h300s_firmware,h500s_firmware,h700s_firmware,h410s_firmware",CVE-2023-28322,"An information disclosure vulnerability exists in curl <v8.1.0 when doing HTTP(S) transfers, libcurl might erroneously use the read callback (`CURLOPT_READFUNCTION`) to ask for data to send, even when the `CURLOPT_POSTFIELDS` option has been set, if the same handle previously wasused to issue a `PUT` request which used that callback. This flaw may surprise the application and cause it to misbehave and either send off the wrong data or use memory after free or similar in the second transfer. The problem exists in the logic for a reused handle when it is (expected to be) changed from a PUT to a POST.",Network,https://security.netapp.com/advisory/ntap-20230609-0009/ | https://lists.debian.org/debian-lts-announce/2023/12/msg00015.html,"2.3 (before 8.1.0), 2.3 (before 13.5), 2.3 (before 12.6.8), 2.3 (before 11.7.9), 2.3",2023-05-26
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-28702,"ASUS RT-AC86U does not filter special characters for parameters in specific web URLs. A remote attacker with normal user privileges can exploit this vulnerability to perform command injection attack to execute arbitrary system commands, disrupt system or terminate service.",,Not provided,2.3,2023-06-02
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-28703,"ASUS RT-AC86U’s specific cgi function has a stack-based buffer overflow vulnerability due to insufficient validation for network packet header length. A remote attacker with administrator privileges can exploit this vulnerability to execute arbitrary system commands, disrupt system or terminate service.",,Not provided,2.3,2023-06-02
+ASUS,Unknown,adm,CVE-2023-2909,"EZ Sync service fails to adequately handle user input, allowing an attacker to navigate beyond the intended directory structure and delete files. Affected products and versions include: ADM 4.0.6.REG2, 4.1.0 and below as well as ADM 4.2.1.RGE2 and below.",Network,https://www.asustor.com/security/security_advisory_detail?id=25,"2.3 (up to 4.2.1.rge2), 2.3 (up to 4.0.6.reg2), 2.3 (up to 4.1.0rlq1)",2023-05-31
+ASUS,Unknown,data_master,CVE-2023-2910,"Improper neutralization of special elements used in a command ('Command Injection') vulnerability in Printer service functionality in ASUSTOR Data Master (ADM) allows remote unauthorized users to execute arbitrary commands via unspecified vectors. Affected products and versions include: ADM 4.0.6.RIS1, 4.1.0 and below as well as ADM 4.2.2.RI61 and below.
+",Network,https://www.asustor.com/security/security_advisory_detail?id=27,"2.3 (up to 4.0.6.ris1), 2.3 (before 4.2.3.rk91)",2023-08-17
+ASUS,Router,rt-ac51u_firmware,CVE-2023-29772,A Cross-site scripting (XSS) vulnerability in the System Log/General Log page of the administrator web UI in ASUS RT-AC51U wireless router firmware version up to and including 3.0.0.4.380.8591 allows remote attackers to inject arbitrary web script or HTML via a malicious network request.,Adjacent Network,Not provided,2.3 (up to 3.0.0.4.380.8591),2023-05-02
+ASUS,Unknown,adm,CVE-2023-30770,"A stack-based buffer overflow vulnerability was found in the ASUSTOR Data Master (ADM) due to the lack of data size validation. An attacker can exploit this vulnerability to execute arbitrary code. Affected ADM versions include: 4.0.6.REG2, 4.1.0 and below as well as 4.2.0.RE71 and below.",Network,https://www.asustor.com/security/security_advisory_detail?id=21,"2.3 (up to 4.0.6.reg2), 2.3 (before 4.2.1.rge2)",2023-04-17
+ASUS,Router,rt-ax3000_firmware,CVE-2023-31195,"ASUS Router RT-AX3000 Firmware versions prior to 3.0.0.4.388.23403 uses sensitive cookies without 'Secure' attribute. When an attacker is in a position to be able to mount a man-in-the-middle attack, and a user is tricked to log into the affected device through an unencrypted ('http') connection, the user's session may be hijacked.",Network,https://www.asus.com/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-ax3000/helpdesk_bios/?model2Name=RT-AX3000,2.3 (before 3.0.0.4.388.23403),2023-06-13
+ASUS,Router,RT-AC51U,CVE-2023-31889,An issue discovered in httpd in ASUS RT-AC51U with firmware version up to and including 3.0.0.4.380.8591 allows local attackers to cause a denial of service via crafted GET request.,,Not provided,unknown versions,2024-04-29
+ASUS,Router,RT-AC51U,CVE-2023-33548,Cross Site Scripting (XSS) vulnerability in ASUS RT-AC51U with firmware versions up to and including 3.0.0.4.380.8591 allows attackers to run arbitrary code via the WPA Pre-Shared Key field.,,Not provided,unknown versions,2024-05-06
+ASUS,Unknown,rt-ax88u_firmware,CVE-2023-34358,"ASUS RT-AX88U's httpd is subject to an unauthenticated DoS condition. A remote attacker can send a specially crafted request to a device which contains a specific user agent, causing the httpd binary to crash during a string comparison performed within web.c, resulting in a DoS condition.",,Not provided,2.3 (before 3.0.0.4.388.23748),2023-07-31
+ASUS,Unknown,rt-ax88u_firmware,CVE-2023-34359,"ASUS RT-AX88U's httpd is subject to an unauthenticated DoS condition. A remote attacker can send a specially crafted request to the device which causes the httpd binary to crash within the ""do_json_decode()"" function of ej.c, resulting in a DoS condition.",,Not provided,2.3 (before 3.0.0.4.388.23748),2023-07-31
+ASUS,Unknown,rt-ax88u_firmware,CVE-2023-34360,"A stored cross-site scripting (XSS) issue was discovered within the Custom User Icons functionality of ASUS RT-AX88U running firmware versions 3.0.0.4.388.23110 and prior.  After a remote attacker logging in device with regular user privilege, the remote attacker can perform a Stored Cross-site Scripting (XSS) attack by uploading image which containing JavaScript code.",Network,Not provided,2.3 (up to 3.0.0.4.388.23110),2023-07-31
+ASUS,Router,rt-n10lx_firmware,CVE-2023-34940,Asus RT-N10LX Router v2.0.0.39 was discovered to contain a stack overflow via the url parameter at /start-apply.html. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.,Network,Not provided,2.3,2023-06-12
+ASUS,Router,rt-n10lx_firmware,CVE-2023-34941,A stored cross-site scripting (XSS) vulnerability in the urlFilterList function of Asus RT-N10LX Router v2.0.0.39 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the URL Keyword List text field. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.,Network,Not provided,2.3,2023-06-12
+ASUS,Router,rt-n10lx_firmware,CVE-2023-34942,Asus RT-N10LX Router v2.0.0.39 was discovered to contain a stack overflow via the mac parameter at /start-apply.html. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.,Network,Not provided,2.3,2023-06-12
+ASUS,Unknown,"rt-ac86u_firmware,rt-ax56u_v2_firmware",CVE-2023-35086,"
+It is identified a format string vulnerability in ASUS RT-AX56U V2 & RT-AC86U. This vulnerability is caused by directly using input as a format string when calling syslog in logmessage_normal function, in the do_detwan_cgi module of httpd. A remote attacker with administrator privilege can exploit this vulnerability to perform remote arbitrary code execution, arbitrary system operation or disrupt service.
+
+This issue affects RT-AX56U V2: 3.0.0.4.386_50460; RT-AC86U: 3.0.0.4_386_51529.
+
+",,Not provided,2.3,2023-07-21
+ASUS,Unknown,"rt-ac86u_firmware,rt-ax56u_v2_firmware",CVE-2023-35087,"
+It is identified a format string vulnerability in ASUS RT-AX56U V2 & RT-AC86U. This vulnerability is caused by lacking validation for a specific value when calling cm_processChangedConfigMsg in ccm_processREQ_CHANGED_CONFIG function in AiMesh system. An unauthenticated remote attacker can exploit this vulnerability without privilege to perform remote arbitrary code execution, arbitrary system operation or disrupt service.
+This issue affects RT-AX56U V2: 3.0.0.4.386_50460; RT-AC86U: 3.0.0.4_386_51529.",,Not provided,2.3,2023-07-21
+ASUS,Router,RT-AX92U,CVE-2023-35720,"ASUS RT-AX92U lighttpd mod_webdav.so SQL Injection Information Disclosure Vulnerability. This vulnerability allows network-adjacent attackers to disclose sensitive information on affected ASUS RT-AX92U routers. Authentication is not required to exploit this vulnerability. 
+
+The specific flaw exists within the mod_webdav.so module. When parsing a request, the process does not properly validate a user-supplied string before using it to construct SQL queries. An attacker can leverage this vulnerability to disclose information in the context of root. Was ZDI-CAN-16078.",,https://www.asus.com/networking-iot-servers/whole-home-mesh-wifi-system/aimesh-wifi-routers-and-systems/rt-ax92u/helpdesk_bios/?model2Name=RT-AX92U,unknown versions,2024-05-03
+ASUS,Unknown,data_master,CVE-2023-3697,"Printer service fails to adequately handle user input, allowing an remote unauthorized users to navigate beyond the intended directory structure and create files. Affected products and versions include: ADM 4.0.6.RIS1, 4.1.0 and below as well as ADM 4.2.2.RI61 and below.
+",Network,https://www.asustor.com/security/security_advisory_detail?id=28,"2.3 (up to 4.0.6.ris1), 2.3 (before 4.2.3.rk91)",2023-08-17
+ASUS,Unknown,data_master,CVE-2023-3698,"Printer service fails to adequately handle user input, allowing an remote unauthorized users to navigate beyond the intended directory structure and delete files. Affected products and versions include: ADM 4.0.6.RIS1, 4.1.0 and below as well as ADM 4.2.2.RI61 and below.
+",Network,https://www.asustor.com/security/security_advisory_detail?id=28,"2.3 (up to 4.0.6.ris1), 2.3 (before 4.2.3.rk91)",2023-08-17
+ASUS,Unknown,data_master,CVE-2023-3699,"An Improper Privilege Management vulnerability was found in ASUSTOR Data Master (ADM) allows an unprivileged local users to modify the storage devices configuration. Affected products and versions include: ADM 4.0.6.RIS1, 4.1.0 and below as well as ADM 4.2.2.RI61 and below.
+",Local,https://www.asustor.com/security/security_advisory_detail?id=29,2.3 (before 4.2.3.rk91),2023-08-22
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-38031,"
+ASUS RT-AC86U Adaptive QoS - Web History function has insufficient filtering of special character. A remote attacker with regular user privilege can exploit this vulnerability to perform command injection attack to execute arbitrary commands, disrupt system or terminate services.
+
+
+
+",Network,Not provided,2.3,2023-09-07
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-38032,"
+ASUS RT-AC86U AiProtection security- related function has insufficient filtering of special character. A remote attacker with regular user privilege can exploit this vulnerability to perform command injection attack to execute arbitrary commands, disrupt system or terminate services.
+
+
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-38033,"
+ASUS RT-AC86U unused Traffic Analyzer legacy Statistic function has insufficient filtering of special character. A remote attacker with regular user privilege can exploit this vulnerability to perform command injection attack to execute arbitrary commands, disrupt system or terminate services.
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,rt-ac66u_b1_firmware,CVE-2023-39086,ASUS RT-AC66U B1 3.0.0.4.286_51665 was discovered to transmit sensitive information in cleartext.,Network,http://asus.com,2.3,2023-08-08
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-39236,"
+ASUS RT-AC86U Traffic Analyzer - Statistic function has insufficient filtering of special character. A remote attacker with regular user privilege can exploit this vulnerability to perform command injection attack to execute arbitrary commands, disrupt system or terminate services.
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,rt-ac86u_firmware,CVE-2023-39237,"
+ASUS RT-AC86U Traffic Analyzer - Apps analysis function has insufficient filtering of special character. A remote attacker with regular user privilege can exploit this vulnerability to perform command injection attack to execute arbitrary commands, disrupt system or terminate services.
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,"rt-ax55_firmware,rt-ax56u_v2_firmware,rt-ac86u_firmware",CVE-2023-39238,"
+It is identified a format string vulnerability in ASUS RT-AX56U V2. This vulnerability is caused by lacking validation for a specific value within its set_iperf3_svr.cgi module. A remote attacker with administrator privilege can exploit this vulnerability to perform remote arbitrary code execution, arbitrary system operation or disrupt service.
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,"rt-ax55_firmware,rt-ax56u_v2_firmware,rt-ac86u_firmware",CVE-2023-39239,"
+It is identified a format string vulnerability in ASUS RT-AX56U V2’s General function API. This vulnerability is caused by lacking validation for a specific value within its  apply.cgi module. A remote attacker with administrator privilege can exploit this vulnerability to perform remote arbitrary code execution, arbitrary system operation or disrupt service.
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,"rt-ax55_firmware,rt-ax56u_v2_firmware,rt-ac86u_firmware",CVE-2023-39240,"
+It is identified a format string vulnerability in ASUS RT-AX56U V2’s iperf client function API. This vulnerability is caused by lacking validation for a specific value within its set_iperf3_cli.cgi module. A remote attacker with administrator privilege can exploit this vulnerability to perform remote arbitrary code execution, arbitrary system operation or disrupt service.
+
+",,Not provided,2.3,2023-09-07
+ASUS,Unknown,rt-ax55_firmware,CVE-2023-39780,ASUS RT-AX55 v3.0.0.4.386.51598 was discovered to contain an authenticated command injection vulnerability.,Network,Not provided,2.3,2023-09-11
+ASUS,Unknown,rt-ax55_firmware,CVE-2023-41345,"ASUS RT-AX55’s authentication-related function has a vulnerability of insufficient filtering of special characters within its token-generated module. An authenticated remote attacker can exploit this vulnerability to perform a Command Injection attack to execute arbitrary commands, disrupt the system, or terminate services.",Network,Not provided,2.3,2023-11-03
+ASUS,Unknown,rt-ax55_firmware,CVE-2023-41346,"ASUS RT-AX55’s authentication-related function has a vulnerability of insufficient filtering of special characters within its token-refresh module. An authenticated remote attacker can exploit this vulnerability to perform a Command Injection attack to execute arbitrary commands, disrupt the system or terminate services.",Network,Not provided,2.3,2023-11-03
+ASUS,Unknown,rt-ax55_firmware,CVE-2023-41347,"ASUS RT-AX55’s authentication-related function has a vulnerability of insufficient filtering of special characters within its check token module. An authenticated remote attacker can exploit this vulnerability to perform a Command Injection attack to execute arbitrary commands, disrupt the system or terminate services.",Network,Not provided,2.3,2023-11-03
+ASUS,Unknown,rt-ax55_firmware,CVE-2023-41348,"ASUS RT-AX55’s authentication-related function has a vulnerability of insufficient filtering of special characters within its code-authentication module. An authenticated remote attacker can exploit this vulnerability to perform a Command Injection attack to execute arbitrary commands, disrupt the system or terminate services.",Network,Not provided,2.3,2023-11-03
+ASUS,Router,rt-ax88u_firmware,CVE-2023-41349,"
+ASUS router RT-AX88U has a vulnerability of using externally controllable format strings within its Advanced Open VPN function. An authenticated remote attacker can exploit the exported OpenVPN configuration to execute an externally-controlled format string attack, resulting in sensitivity information leakage, or forcing the device to reset and permanent denial of service.
+
+",,Not provided,2.3 (before 3.0.0.4.388.23748),2023-09-18
+ASUS,Unknown,data_master,CVE-2023-4475,"An Arbitrary File Movement vulnerability was found in ASUSTOR Data Master (ADM) allows an attacker to exploit the file renaming feature to move files to unintended directories. Affected products and versions include: ADM 4.0.6.RIS1, 4.1.0 and below as well as ADM 4.2.2.RI61 and below.
+",Local,https://www.asustor.com/security/security_advisory_detail?id=30,2.3 (before 4.2.2.ri61),2023-08-22
+ASUS,Unknown,rt-ac87u_firmware,CVE-2023-47678,An improper access control vulnerability exists in RT-AC87U all versions. An attacker may read or write files that are not intended to be accessed by connecting to a target device via tftp.,Network,https://www.asus.com/event/network/EOL-product/ | https://www.asus.com/support/,2.3,2023-11-15
+ASUS,Graphics Card,linux_kernel,CVE-2023-52912,"In the Linux kernel, the following vulnerability has been resolved:
+
+drm/amdgpu: Fixed bug on error when unloading amdgpu
+
+Fixed bug on error when unloading amdgpu.
+
+The error message is as follows:
+[  377.706202] kernel BUG at drivers/gpu/drm/drm_buddy.c:278!
+[  377.706215] invalid opcode: 0000 [#1] PREEMPT SMP NOPTI
+[  377.706222] CPU: 4 PID: 8610 Comm: modprobe Tainted: G          IOE      6.0.0-thomas #1
+[  377.706231] Hardware name: ASUS System Product Name/PRIME Z390-A, BIOS 2004 11/02/2021
+[  377.706238] RIP: 0010:drm_buddy_free_block+0x26/0x30 [drm_buddy]
+[  377.706264] Code: 00 00 00 90 0f 1f 44 00 00 48 8b 0e 89 c8 25 00 0c 00 00 3d 00 04 00 00 75 10 48 8b 47 18 48 d3 e0 48 01 47 28 e9 fa fe ff ff <0f> 0b 0f 1f 84 00 00 00 00 00 0f 1f 44 00 00 41 54 55 48 89 f5 53
+[  377.706282] RSP: 0018:ffffad2dc4683cb8 EFLAGS: 00010287
+[  377.706289] RAX: 0000000000000000 RBX: ffff8b1743bd5138 RCX: 0000000000000000
+[  377.706297] RDX: ffff8b1743bd5160 RSI: ffff8b1743bd5c78 RDI: ffff8b16d1b25f70
+[  377.706304] RBP: ffff8b1743bd59e0 R08: 0000000000000001 R09: 0000000000000001
+[  377.706311] R10: ffff8b16c8572400 R11: ffffad2dc4683cf0 R12: ffff8b16d1b25f70
+[  377.706318] R13: ffff8b16d1b25fd0 R14: ffff8b1743bd59c0 R15: ffff8b16d1b25f70
+[  377.706325] FS:  00007fec56c72c40(0000) GS:ffff8b1836500000(0000) knlGS:0000000000000000
+[  377.706334] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  377.706340] CR2: 00007f9b88c1ba50 CR3: 0000000110450004 CR4: 00000000003706e0
+[  377.706347] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[  377.706354] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[  377.706361] Call Trace:
+[  377.706365]  <TASK>
+[  377.706369]  drm_buddy_free_list+0x2a/0x60 [drm_buddy]
+[  377.706376]  amdgpu_vram_mgr_fini+0xea/0x180 [amdgpu]
+[  377.706572]  amdgpu_ttm_fini+0x12e/0x1a0 [amdgpu]
+[  377.706650]  amdgpu_bo_fini+0x22/0x90 [amdgpu]
+[  377.706727]  gmc_v11_0_sw_fini+0x26/0x30 [amdgpu]
+[  377.706821]  amdgpu_device_fini_sw+0xa1/0x3c0 [amdgpu]
+[  377.706897]  amdgpu_driver_release_kms+0x12/0x30 [amdgpu]
+[  377.706975]  drm_dev_release+0x20/0x40 [drm]
+[  377.707006]  release_nodes+0x35/0xb0
+[  377.707014]  devres_release_all+0x8b/0xc0
+[  377.707020]  device_unbind_cleanup+0xe/0x70
+[  377.707027]  device_release_driver_internal+0xee/0x160
+[  377.707033]  driver_detach+0x44/0x90
+[  377.707039]  bus_remove_driver+0x55/0xe0
+[  377.707045]  pci_unregister_driver+0x3b/0x90
+[  377.707052]  amdgpu_exit+0x11/0x6c [amdgpu]
+[  377.707194]  __x64_sys_delete_module+0x142/0x2b0
+[  377.707201]  ? fpregs_assert_state_consistent+0x22/0x50
+[  377.707208]  ? exit_to_user_mode_prepare+0x3e/0x190
+[  377.707215]  do_syscall_64+0x38/0x90
+[  377.707221]  entry_SYSCALL_64_after_hwframe+0x63/0xcd",Local,Not provided,"2.3, 2.3 (before 6.1.7)",2024-08-21
+ASUS,Unknown,armoury_crate,CVE-2023-5716,ASUS Armoury Crate has a vulnerability in arbitrary file write and allows remote attackers to access or modify arbitrary files by sending specific HTTP requests without permission.,Network,Not provided,2.3 (before 4.1.0.8),2024-01-19
+ASUS,Router,"RT-N10E, RT-N12E",CVE-2025-1354,"A cross-site scripting (XSS)  vulnerability in the RT-N10E/ RT-N12E 2.0.0.x firmware . This vulnerability caused by improper input validation and can be triggered via the manipulation of the SSID argument in the sysinfo.asp file, leading to disclosure of sensitive information. Note: All versions of RT-N10E and RT-N12E are unsupported (End-of-Life, EOL). Consumers can mitigate this vulnerability by disabling the remote access features from WAN",Network,https://www.asus.com/supportonly/rt-n10e/helpdesk_bios/ | https://www.asus.com/supportonly/rt-n12e/helpdesk_bios/ | https://www.asus.com/,unknown versions,2025-02-16
+ASUS,BIOS/Firmware,linux_kernel,CVE-2025-21809,"In the Linux kernel, the following vulnerability has been resolved:
+
+rxrpc, afs: Fix peer hash locking vs RCU callback
+
+In its address list, afs now retains pointers to and refs on one or more
+rxrpc_peer objects.  The address list is freed under RCU and at this time,
+it puts the refs on those peers.
+
+Now, when an rxrpc_peer object runs out of refs, it gets removed from the
+peer hash table and, for that, rxrpc has to take a spinlock.  However, it
+is now being called from afs's RCU cleanup, which takes place in BH
+context - but it is just taking an ordinary spinlock.
+
+The put may also be called from non-BH context, and so there exists the
+possibility of deadlock if the BH-based RCU cleanup happens whilst the hash
+spinlock is held.  This led to the attached lockdep complaint.
+
+Fix this by changing spinlocks of rxnet->peer_hash_lock back to
+BH-disabling locks.
+
+    ================================
+    WARNING: inconsistent lock state
+    6.13.0-rc5-build2+ #1223 Tainted: G            E
+    --------------------------------
+    inconsistent {SOFTIRQ-ON-W} -> {IN-SOFTIRQ-W} usage.
+    swapper/1/0 [HC0[0]:SC1[1]:HE1:SE0] takes:
+    ffff88810babe228 (&rxnet->peer_hash_lock){+.?.}-{3:3}, at: rxrpc_put_peer+0xcb/0x180
+    {SOFTIRQ-ON-W} state was registered at:
+      mark_usage+0x164/0x180
+      __lock_acquire+0x544/0x990
+      lock_acquire.part.0+0x103/0x280
+      _raw_spin_lock+0x2f/0x40
+      rxrpc_peer_keepalive_worker+0x144/0x440
+      process_one_work+0x486/0x7c0
+      process_scheduled_works+0x73/0x90
+      worker_thread+0x1c8/0x2a0
+      kthread+0x19b/0x1b0
+      ret_from_fork+0x24/0x40
+      ret_from_fork_asm+0x1a/0x30
+    irq event stamp: 972402
+    hardirqs last  enabled at (972402): [<ffffffff8244360e>] _raw_spin_unlock_irqrestore+0x2e/0x50
+    hardirqs last disabled at (972401): [<ffffffff82443328>] _raw_spin_lock_irqsave+0x18/0x60
+    softirqs last  enabled at (972300): [<ffffffff810ffbbe>] handle_softirqs+0x3ee/0x430
+    softirqs last disabled at (972313): [<ffffffff810ffc54>] __irq_exit_rcu+0x44/0x110
+
+    other info that might help us debug this:
+     Possible unsafe locking scenario:
+           CPU0
+           ----
+      lock(&rxnet->peer_hash_lock);
+      <Interrupt>
+        lock(&rxnet->peer_hash_lock);
+
+     *** DEADLOCK ***
+    1 lock held by swapper/1/0:
+     #0: ffffffff83576be0 (rcu_callback){....}-{0:0}, at: rcu_lock_acquire+0x7/0x30
+
+    stack backtrace:
+    CPU: 1 UID: 0 PID: 0 Comm: swapper/1 Tainted: G            E      6.13.0-rc5-build2+ #1223
+    Tainted: [E]=UNSIGNED_MODULE
+    Hardware name: ASUS All Series/H97-PLUS, BIOS 2306 10/09/2014
+    Call Trace:
+     <IRQ>
+     dump_stack_lvl+0x57/0x80
+     print_usage_bug.part.0+0x227/0x240
+     valid_state+0x53/0x70
+     mark_lock_irq+0xa5/0x2f0
+     mark_lock+0xf7/0x170
+     mark_usage+0xe1/0x180
+     __lock_acquire+0x544/0x990
+     lock_acquire.part.0+0x103/0x280
+     _raw_spin_lock+0x2f/0x40
+     rxrpc_put_peer+0xcb/0x180
+     afs_free_addrlist+0x46/0x90 [kafs]
+     rcu_do_batch+0x2d2/0x640
+     rcu_core+0x2f7/0x350
+     handle_softirqs+0x1ee/0x430
+     __irq_exit_rcu+0x44/0x110
+     irq_exit_rcu+0xa/0x30
+     sysvec_apic_timer_interrupt+0x7f/0xa0
+     </IRQ>",Local,Not provided,"2.3 (before 6.13.2), 2.3 (before 6.12.13)",2025-02-27
+ASUS,Unknown,asus-ec-sensors,CVE-2025-38142,"In the Linux kernel, the following vulnerability has been resolved:
+
+hwmon: (asus-ec-sensors) check sensor index in read_string()
+
+Prevent a potential invalid memory access when the requested sensor
+is not found.
+
+find_ec_sensor_index() may return a negative value (e.g. -ENOENT),
+but its result was used without checking, which could lead to
+undefined behavior when passed to get_sensor_info().
+
+Add a proper check to return -EINVAL if sensor_index is negative.
+
+Found by Linux Verification Center (linuxtesting.org) with SVACE.
+
+[groeck: Return error code returned from find_ec_sensor_index]",,Not provided,unknown versions,2025-07-03
+ASUS,Unknown,Unknown,CVE-2025-7379,"A security bypass vulnerability allows exploitation via Reverse Tabnabbing, a type of phishing attack where attackers can manipulate the content of the original tab, leading to credential theft and other security risks. This issue affects DataSync Center: from 1.1.0 before 1.1.0.r207, and from 1.2.0 before 1.2.0.r206.",,https://www.asustor.com/security/security_advisory_detail?id=42,unknown versions,2025-07-09
+ASUS,Unknown,ASUSTOR,CVE-2025-7378,"An improper Input Validation vulnerability allows injecting arbitrary values of the NAS configuration file in ASUSTOR ADM. This could potentially lead to system misconfiguration and break the format of the configuation file, causing the NAS to exhibit unexpected behavior.
+This issue affects ADM: from 4.1 before 4.3.1.R5A1.",,https://www.asustor.com/security/security_advisory_detail?id=41,unknown versions,2025-07-09

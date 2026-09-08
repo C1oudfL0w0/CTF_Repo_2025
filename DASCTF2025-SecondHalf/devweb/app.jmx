@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0">
+    <hashTree>
+        <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Download Test with Parameters" enabled="true">
+            <stringProp name="TestPlan.functional_mode">false</stringProp>
+            <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+            <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="Argument" guiclass="HTTPArgumentPanel" testclass="Argument" testname="mingWen" enabled="true">
+                        <stringProp name="Argument.name">mingWen</stringProp>
+                        <stringProp name="Argument.value">test</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                    <elementProp name="" elementType="Argument" guiclass="HTTPArgumentPanel" testclass="Argument" testname="salt" enabled="true">
+                        <stringProp name="Argument.name">salt</stringProp>
+                        <stringProp name="Argument.value">f9bc855c9df15ba7602945fb939deefc</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                </collectionProp>
+            </elementProp>
+            <stringProp name="TestPlan.comments_or_notes"/>
+            <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+        </TestPlan>
+        <hashTree>
+            <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="User Group" enabled="true">
+                <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+                <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+                    <boolProp name="LoopController.continue_forever">false</boolProp>
+                    <intProp name="LoopController.loops">1</intProp>
+                </elementProp>
+                <stringProp name="ThreadGroup.num_threads">1</stringProp>
+                <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+                <longProp name="ThreadGroup.start_time">0</longProp>
+                <longProp name="ThreadGroup.end_time">0</longProp>
+                <boolProp name="ThreadGroup.scheduler">false</boolProp>
+                <stringProp name="ThreadGroup.duration"></stringProp>
+                <stringProp name="ThreadGroup.delay"></stringProp>
+                <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+            </ThreadGroup>
+            <hashTree>
+                <JSR223PreProcessor guiclass="JSR223Panel" testclass="JSR223PreProcessor" testname="Calculate Sign" enabled="true">
+                    <stringProp name="JSR223PreProcessor.language">groovy</stringProp>
+                    <stringProp name="JSR223PreProcessor.parameters">import org.apache.commons.codec.digest.DigestUtils;</stringProp>
+                    <stringProp name="JSR223PreProcessor.reset_vars">false</stringProp>
+                    <stringProp name="JSR223PreProcessor.clear_stack">false</stringProp>
+                    <stringProp name="JSR223PreProcessor.script">
+                        def mingWen = vars.get('mingWen');
+                        def firstMi = DigestUtils.md5Hex(mingWen);
+                        def jieStr = firstMi.substring(5, 16);
+                        def salt = vars.get('salt');
+                        def newStr = firstMi + jieStr + salt;
+                        def sign = DigestUtils.md5Hex(newStr);
+                        vars.put('sign', sign);
+                    </stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Download File" enabled="true">
+                    <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+                    <stringProp name="Comment"/>
+                    <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                        <collectionProp name="Arguments.arguments">
+                            <elementProp name="" elementType="Argument" guiclass="HTTPArgumentPanel" testclass="Argument" testname="file" enabled="true">
+                                <stringProp name="Argument.name">file</stringProp>
+                                <stringProp name="Argument.value">test</stringProp>
+                                <stringProp name="Argument.metadata">=</stringProp>
+                            </elementProp>
+                            <elementProp name="" elementType="Argument" guiclass="HTTPArgumentPanel" testclass="Argument" testname="sign" enabled="true">
+                                <stringProp name="Argument.name">sign</stringProp>
+                                <stringProp name="Argument.value">${sign}</stringProp>
+                                <stringProp name="Argument.metadata">=</stringProp>
+                            </elementProp>
+                        </collectionProp>
+                    </elementProp>
+                    <stringProp name="HTTPSampler.domain">localhost</stringProp>
+                    <stringProp name="HTTPSampler.port">8080</stringProp>
+                    <stringProp name="HTTPSampler.protocol">http</stringProp>
+                    <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+                    <stringProp name="HTTPSampler.path">/download</stringProp>
+                    <stringProp name="HTTPSampler.method">GET</stringProp>
+                    <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                    <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                    <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                    <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                    <stringProp name="HTTPSampler.body_data"/>
+                    <boolProp name="HTTPSampler.bypass_proxy">false</boolProp>
+                    <stringProp name="HTTPSampler.proxy_host"/>
+                    <stringProp name="HTTPSampler.proxy_port"/>
+                    <stringProp name="HTTPSampler.proxy_username"/>
+                    <stringProp name="HTTPSampler.proxy_password"/>
+                    <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                </HTTPSamplerProxy>
+                <hashTree/>
+            </hashTree>
+        </hashTree>
+    </hashTree>
+</jmeterTestPlan>

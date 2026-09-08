@@ -1,0 +1,7 @@
+import pickle
+import base64
+import pickletools
+
+opcode = base64.b64decode("gASVSwAAAAAAAACMA2FwcJSMBFVzZXKUk5QpgZR9lCiMAmlklEsCjAh1c2VybmFtZZSMBWd1ZXN0lIwIaXNfYWRtaW6UiYwJbG9nZ2VkX2lulIh1Yi4=")
+
+pickletools.dis(opcode)

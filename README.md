@@ -49,8 +49,8 @@
 ## DASCTF 2025 上半年（FirstHalf）
 
 - **BlueTrace** - `DASCTF2025-FirstHalf/DAS6-BlueTrace_9fb9fe25896304f7ec2d3a344a091f3f.zip`
-- **DAS6-（附件名未含题名）** - `DASCTF2025-FirstHalf/DAS6-_1396588276cc7351e1daae0c72a0a2ca.zip`
-- **DAS6-（附件名未含题名）** - `DASCTF2025-FirstHalf/DAS6-_ef796493e469af617da4111adda34f4e.zip`
+- **再短一点点** - `DASCTF2025-FirstHalf/DAS6-_1396588276cc7351e1daae0c72a0a2ca.zip`
+- **泽西岛** - `DASCTF2025-FirstHalf/DAS6-_ef796493e469af617da4111adda34f4e.zip`
 
 ## DASCTF 2025 下半年（SecondHalf）
 
